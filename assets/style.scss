@@ -1,0 +1,52 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Theme Name:  Twenty - Shpify Theme
+Version:        1.0.0
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. General
+----------------------------------------------------------------*/
+
+// helpers
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+
+// base
+@import "./base";
+
+
+// components
+@import "./section-title";
+@import "./buttons";
+@import "./form";
+@import "./social-links";
+@import "./page-title";
+@import "./preloader";
+@import "./pagination";
+@import "./modal";
+
+// layout
+@import "./header";
+@import "./hero-slider";
+@import "./footer";
+
+// page
+@import "./home-default";
+
+@import "./collections";
+
+@import "./checkout";
+
+@import "./product-single";
+
+@import "./about";
+
+@import "./build";
+
+@import "./contact";
+
+
+
+

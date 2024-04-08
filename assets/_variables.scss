@@ -1,0 +1,38 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../GothamBlack.woff') format('woff2'),
+        url('../GothamBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// fonts
+$base-font-size: 15;
+$base-font: "Montserrat", sans-serif;
+$heading-font: 'Gotham';
+
+
+
+// color
+$dark-gray: #171717; //
+$body-color: #E9E9E9;
+$white: #fff;
+$light: #DDDDDD; //
+$black: #131313;
+$small-black: #333;
+$cyan: #F9F9F9; //
+
+$theme-primary-color: #F14F0E; //
+$body-bg-color: #fff;
+$section-bg-color: #F1E2CC; //
+$text-color: #7F7F8A; //
+$text-light-color: #6F6F6F; //
+$heading-color: $white;
+$border-color: #3C3C3C; //
+$border-color-s2: #F1E2CC; //

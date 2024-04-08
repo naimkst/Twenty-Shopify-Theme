@@ -1,0 +1,299 @@
+/*--------------------------------------------------------------
+3. content
+--------------------------------------------------------------*/
+
+// static-hero
+.hero-slider,
+.static-hero {
+	width: 100%;
+	height: 100vh;
+	min-height: 758px;
+	display: flex;
+	position: relative;
+	z-index: 0;
+
+	@include media-query(1199px) {
+		min-height: 700px;
+	}
+
+	@include media-query(991px) {
+		min-height: 650px;
+	}
+
+	@include media-query(767px) {
+		min-height: 500px;
+	}
+
+	.gradient-overlay+.container {
+		position: relative;
+		z-index: 11;
+	}
+
+	.swiper-slide {
+		position: relative;
+		z-index: 11;
+	}
+
+	.slide-title-top {
+		max-width: 680px;
+
+		@include media-query(767px) {
+			max-width: 500px;
+		}
+
+		span {
+			font-weight: 500;
+			font-size: 25px;
+			color: $white;
+			line-height: 30px;
+
+			@include media-query(767px) {
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	.slide-title {
+		max-width: 680px;
+		margin-bottom: 20px;
+
+		@include media-query(767px) {
+			max-width: 500px;
+		}
+
+		h2 {
+			margin: 0 0 15px;
+			font-size: 46px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 55.2px;
+			letter-spacing: 0.92px;
+			color: $white;
+
+			@include media-query(991px) {
+				font-size: 70px;
+				line-height: 80px;
+				margin-bottom: 0;
+			}
+
+			@include media-query(767px) {
+				font-size: 55px;
+				line-height: 60px;
+			}
+
+			@include media-query(399px) {
+				font-size: 35px;
+				line-height: 35px;
+			}
+
+			span {
+				font-style: italic;
+				display: block;
+			}
+		}
+	}
+
+	p {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 33.24px;
+		color: $white;
+		max-width: 228px;
+		margin-bottom: 30px;
+	}
+
+	.slide-content {
+		padding-bottom: 100px;
+		padding-left: 100px;
+
+		@include media-query(1700px) {
+			padding-left: 30px;
+		}
+
+		@include media-query(1500px) {
+			padding-left: 10px;
+		}
+	}
+
+	.slide-btns {
+		@include media-query(991px) {
+			max-width: 400px;
+		}
+	}
+
+	.swiper-slide {
+		overflow: hidden;
+	}
+
+	.swiper-container,
+	.hero-container {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.slide-inner,
+	.hero-inner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		text-align: left;
+	}
+
+	// slider controls
+	.swiper-button-prev,
+	.swiper-button-next {
+		background: transparentize(#c3c3c3, 0.8);
+		width: 60px;
+		height: 60px;
+		line-height: 56px;
+		border: 2px solid $white;
+		border-radius: 50%;
+		opacity: 0.7;
+		text-align: center;
+		@include transition-time(0.3s);
+		display: none;
+
+		&:hover {
+			opacity: 0.9;
+		}
+
+		@include media-query(767px) {
+			display: none;
+		}
+	}
+
+	.swiper-button-prev {
+		left: 25px;
+
+		&:before {
+			font-family: "themify";
+			content: "\e629";
+			font-size: 20px;
+			color: $white;
+		}
+	}
+
+	.swiper-button-next {
+		right: 25px;
+
+		&:before {
+			font-family: "themify";
+			content: "\e628";
+			font-size: 20px;
+			color: $white;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		@include media-query(991px) {
+			display: none;
+		}
+	}
+
+	.swiper-pagination {
+		text-align: left;
+		left: 100px;
+
+		@include media-query(1700px) {
+			left: 32px;
+		}
+		@include media-query(1500px) {
+			left: 12px;
+		}
+	}
+
+	.swiper-pagination-bullet {
+		width: 7px;
+		height: 7px;
+		text-align: center;
+		line-height: 7px;
+		font-size: 7px;
+		color: #000;
+		opacity: 1;
+		background: $white;
+		text-align: left;
+	}
+
+	.swiper-pagination-bullet-active {
+		color: $theme-primary-color;
+		background: $theme-primary-color;
+		width: 7px;
+		height: 7px;
+		text-align: center;
+		line-height: 7px;
+	}
+
+	.swiper-container-horizontal>.swiper-pagination-bullets,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: 30px;
+	}
+
+	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 8px;
+	}
+}
+
+// .static-hero
+
+.static-hero {
+	background-size: cover !important;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	.hero-content {
+		span {
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 100%;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.80);
+		}
+
+		h2 {
+			font-size: 68px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 65px;
+			color: $white;
+			margin-bottom: 30px;
+			margin-top: 10px;
+
+			@media(max-width:575px) {
+				font-size: 50px;
+				line-height: 52px;
+				margin-bottom: 20px;
+			}
+		}
+
+		p {
+			max-width: 582px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			color: rgba(255, 255, 255, 0.80);
+			font-family: $heading-font;
+
+			@media(max-width:575px) {
+				font-size: 18px;
+			}
+		}
+	}
+}

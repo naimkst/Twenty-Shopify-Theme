@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+16. build-section
+--------------------------------------------------------------*/
+.build-section {
+    .build-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .build-text {
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+
+        @media(max-width:991px) {
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 39px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 55.2px;
+            letter-spacing: 0.92px;
+            margin-bottom: 20px;
+
+            @media(max-width:991px) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        .theme-btn-s2 {
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        span {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0.42px;
+        }
+    }
+}

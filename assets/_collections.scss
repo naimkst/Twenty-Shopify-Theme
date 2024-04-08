@@ -1,0 +1,187 @@
+/*--------------------------------------------------------------
+14. collection-section
+--------------------------------------------------------------*/
+
+.collection-section {
+    padding-top: 40px;
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .collection-items {
+        display: flex;
+
+        @media(max-width:1199px) {
+            display: block;
+        }
+
+        .collection-one {
+            flex-basis: 40%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background: $dark-gray;
+
+            @media(max-width:1199px) {
+                flex-basis: 35%;
+            }
+
+
+            .collection-img {
+                overflow: visible;
+                text-align: center;
+
+                img {
+                    width: unset;
+                    transform: scale(1);
+                    transition: all .6s;
+
+                    @media(max-width:991px) {
+                        transform: unset;
+                        padding: 20px;
+                    }
+                }
+            }
+
+            &:hover {
+                .collection-img {
+                    img {
+                        transform: scale(1.2);
+
+                        @media(max-width:991px) {
+                            transform: unset;
+                        }
+                    }
+                }
+            }
+
+            .collection-text {
+                padding: 40px;
+                margin-top: 20px;
+                text-align: center;
+
+                @media(max-width:1300px) {
+                    padding: 30px;
+                    margin-top: 0px;
+                    padding-top: 0;
+                }
+
+                h2 {
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 38px;
+                    letter-spacing: 0.2px;
+                    text-transform: uppercase;
+                    color: $white;
+                    position: relative;
+                    margin-bottom: 30px;
+                    padding-top: 20px;
+                    letter-spacing: 0.125rem;
+
+                    @media(max-width:991px) {
+                        margin-bottom: 10px;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 0;
+                        width: 23px;
+                        height: 4px;
+                        content: "";
+                        background: $theme-primary-color;
+                    }
+                }
+            }
+        }
+
+        .collection-two {
+            flex-basis: 60%;
+
+            @media(max-width:1199px) {
+                flex-basis: 65%;
+            }
+
+
+            .collection-large-img {
+                position: relative;
+                z-index: 2;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    transform: scale(1);
+                    transition: all .6s;
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            .collection-two {
+                order: 1;
+            }
+
+            .collection-one {
+                order: 2;
+                background: $black;
+            }
+        }
+    }
+}
+
+.mfp-figure:after {
+    display: none;
+}
+
+.collection-page {
+    .product-wrap .product-item {
+        background: none;
+        border: 1px solid #262626;
+    }
+    .product-wrap .product-item .product-info h2 {
+        position: relative;
+        padding-top: 20px;
+
+        &:before {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 23px;
+            height: 4px;
+            content: "";
+            background: #F14F0E;
+            border-radius: 5px;
+        }
+    }
+
+    .collection-section .collection-items .collection-one .collection-text {
+
+        h2 {
+            margin-bottom: 5px;
+
+        }
+
+        a.shop-all {
+            font-size: 12px;
+            color: $white;
+
+            &:hover {
+                color: $theme-primary-color;
+            }
+        }
+    }
+}
