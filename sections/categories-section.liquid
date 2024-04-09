@@ -12,9 +12,12 @@
               width=""
               height=""
               alt="">
-            <a href="#" class="bottom-btn">{{ product.title }}</a>
+            <a href="{{ product.url }}" class="bottom-btn">{{ product.title }}</a>
           </div>
-          <a href="#">{{ product.title }}</a>
+          {% for collection in product.collections %}
+            <a href="{{ collection.url }}">{{ collection.title }}</a>,
+          {% endfor %}
+
         </div>
       {% endfor %}
     </div>
