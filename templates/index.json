@@ -36,10 +36,10 @@
       "settings": {
       }
     },
-    "categori_section_WRYhhX": {
-      "type": "categori-section",
+    "categories_section_NLHGzF": {
+      "type": "categories-section",
       "settings": {
-        "limit_category": 50,
+        "limit_category": 7,
         "category_title": "SHOP BY CATEGORY"
       }
     }
@@ -47,6 +47,6 @@
   "order": [
     "main",
     "hero_section_kbmU9m",
-    "categori_section_WRYhhX"
+    "categories_section_NLHGzF"
   ]
 }
