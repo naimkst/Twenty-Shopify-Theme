@@ -42,11 +42,51 @@
         "limit_category": 7,
         "category_title": "SHOP BY CATEGORY"
       }
+    },
+    "features_section_NRXa4R": {
+      "type": "features-section",
+      "blocks": {
+        "block_W9kfzy": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/features-1.jpg",
+            "hero_title": "NEW ARRIVALS",
+            "hero_button_text": "SHOP THE LATEST",
+            "hero_button_Link": ""
+          }
+        },
+        "block_w4rUyX": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/features-3.jpg",
+            "hero_title": "BEST SELLERS",
+            "hero_button_text": "SHOP YOUR FVORITES",
+            "hero_button_Link": "#"
+          }
+        },
+        "block_pianCc": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/features-2.jpg",
+            "hero_title": "THE HOLIDAY OUTFIT",
+            "hero_button_text": "SHOP OCCASION",
+            "hero_button_Link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_W9kfzy",
+        "block_w4rUyX",
+        "block_pianCc"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "hero_section_kbmU9m",
-    "categories_section_NLHGzF"
+    "categories_section_NLHGzF",
+    "features_section_NRXa4R"
   ]
 }
