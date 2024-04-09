@@ -17,10 +17,21 @@
             "hero_button_text": "SHOP NOW",
             "hero_button_Link": ""
           }
+        },
+        "block_VPQxkC": {
+          "type": "block",
+          "settings": {
+            "hero_background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+            "hero_title": "TX2 - VENICE",
+            "hero_description": "Blue Star Dust || 50 Pieces available",
+            "hero_button_text": "SHOP NOW",
+            "hero_button_Link": ""
+          }
         }
       },
       "block_order": [
-        "block_cnXYEa"
+        "block_cnXYEa",
+        "block_VPQxkC"
       ],
       "settings": {
       }
