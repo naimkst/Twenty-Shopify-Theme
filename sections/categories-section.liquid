@@ -14,8 +14,8 @@
               alt="">
             <a href="{{ product.url }}" class="bottom-btn">{{ product.title }}</a>
           </div>
-          {% for collection in product.collections %}
-            <a href="{{ collection.url }}">{{ collection.title }}</a>,
+          {% for collection in product.collections limit: 1 %}
+            <a href="{{ collection.url }}">{{ collection.title }}</a>
           {% endfor %}
 
         </div>
