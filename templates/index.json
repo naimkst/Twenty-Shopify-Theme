@@ -58,15 +58,26 @@
         "block_w4rUyX": {
           "type": "block",
           "settings": {
+            "background_image": "shopify:\/\/shop_images\/features-3.jpg",
             "hero_title": "BEST SELLERS",
             "hero_button_text": "SHOP YOUR FVORITES",
             "hero_button_Link": "#"
+          }
+        },
+        "block_pianCc": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/features-2.jpg",
+            "hero_title": "THE HOLIDAY OUTFIT",
+            "hero_button_text": "SHOP OCCASION",
+            "hero_button_Link": ""
           }
         }
       },
       "block_order": [
         "block_W9kfzy",
-        "block_w4rUyX"
+        "block_w4rUyX",
+        "block_pianCc"
       ],
       "settings": {
       }
