@@ -8,13 +8,13 @@
         <div class="category-item">
           <div class="category-img">
             <img
-              src="{{ image.src |  image_url: width: 400  }}"
+              src="{{ product.featured_image | image_url: width: 400  }}"
               width=""
               height=""
               alt="">
             <a href="#" class="bottom-btn">{{ product.title }}</a>
           </div>
-          <a href="#">NEW</a>
+          <a href="#">{{ product.title }}</a>
         </div>
       {% endfor %}
     </div>
