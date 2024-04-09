@@ -1,0 +1,97 @@
+<section class="category-section section-padding">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h2>{{ section.settings.category_title }}</h2>
+    </div>
+    <div class="category-slider category-slider-active owl-carousel">
+      <div class="category-item">
+        <div class="category-img">
+          <img src="{{ 'category-1.jpg' | assets_url }}" alt="">
+          <a href="#" class="bottom-btn">120 WATCHES</a>
+        </div>
+        <a href="#">NEW</a>
+      </div>
+      <div class="category-item">
+        <div class="category-img">
+          <img src="{{ 'category-3.jpg' | assets_url }}" alt="">
+          <a href="#" class="bottom-btn">128 WATCHES</a>
+        </div>
+        <a href="#">WATCHES</a>
+      </div>
+      <div class="category-item">
+        <div class="category-img">
+          <img
+            src="{{ 'category-2.jpg' | asset_url }}"
+            width=""
+            height=""
+            alt="">
+          <a href="#" class="bottom-btn">100 WATCHES</a>
+        </div>
+        <a href="#">BE TYPES</a>
+      </div>
+      <div class="category-item">
+        <div class="category-img">
+          <img
+            src="{{ 'category-4.jpg' | asset_url }}"
+            width=""
+            height=""
+            alt="">
+          <a href="#" class="bottom-btn">25 WATCHES</a>
+        </div>
+        <a href="#">STRAPES</a>
+      </div>
+      <div class="category-item">
+        <div class="category-img">
+          <img
+            src="{{ 'category-5.jpg' | asset_url }}"
+            width=""
+            height=""
+            alt="">
+          <a href="#" class="bottom-btn">128 WATCHES</a>
+        </div>
+        <a href="#">ACCESSORIES</a>
+      </div>
+      <div class="category-item">
+        <div class="category-img">
+          <img
+            src="{{ 'category-6.jpg' | asset_url }}"
+            width=""
+            height=""
+            alt="">
+          <a href="#" class="bottom-btn">223 WATCHES</a>
+        </div>
+        <a href="#">BUILD YOUR OWN</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Category Section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "limit_category",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "label": "Category Limit",
+        "default": 7
+      },
+      {
+        "type": "text",
+        "id": "category_title",
+        "label": "Categories Title",
+        "default": "SHOP BY CATEGORY"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Category Section"
+      }
+    ]
+  }
+{% endschema %}
