@@ -1,0 +1,54 @@
+<section class="category-section section-padding">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h2>{{ section.settings.category_title }}</h2>
+    </div>
+    {% assign limitData = section.settings.limit_category %}
+
+    <div class="category-slider category-slider-active owl-carousel">
+      {% for collection in collection.products limit: limitData %}
+        <div class="category-item">
+          <div class="category-img">
+            <img
+              src="{{ collection.featured_image |  image_url: width: 350  }}"
+              width=""
+              height=""
+              alt="">
+            <a href="#" class="bottom-btn">{{ collection.title }}</a>
+          </div>
+          <a href="#">{{ collection.name }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Category Section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "limit_category",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "label": "Category Limit",
+        "default": 7
+      },
+      {
+        "type": "text",
+        "id": "category_title",
+        "label": "Categories Title",
+        "default": "SHOP BY CATEGORY"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Category Section"
+      }
+    ]
+  }
+{% endschema %}
