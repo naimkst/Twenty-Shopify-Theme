@@ -1,68 +1,29 @@
 <section class="hero-slider">
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="slide-inner slide-bg-image" data-background="{{ 'slider2.jpeg' | asset_url }}">
-          <div class="container-fluid">
-            <div class="slide-content">
-              <div data-swiper-parallax="300" class="slide-title">
-                <h2>TX2 - VENICE</h2>
-              </div>
-              <div data-swiper-parallax="200" class="slide-title-top">
-                <p>Blue Star Dust || 50 Pieces available</p>
-              </div>
-              <div class="clearfix"></div>
-              <div data-swiper-parallax="500" class="slide-btns">
-                <a href="collection.html" class="theme-btn">SHOP NOW</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!-- end slide-inner -->
-      </div>
-      <!-- end swiper-slide -->
 
-      <div class="swiper-slide">
-        <div class="slide-inner slide-bg-image" data-background="{{ 'slider2.jpeg' | asset_url }}">
-          <!-- <div class="gradient-overlay"></div> -->
-          <div class="container-fluid">
-            <div class="slide-content">
-              <div data-swiper-parallax="300" class="slide-title">
-                <h2>TX2 - VENICE</h2>
-              </div>
-              <div data-swiper-parallax="200" class="slide-title-top">
-                <p>Blue Star Dust || 50 Pieces available</p>
-              </div>
-              <div class="clearfix"></div>
-              <div data-swiper-parallax="500" class="slide-btns">
-                <a href="collection.html" class="theme-btn">SHOP NOW</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      <!-- end slide-inner -->
-      </div>
-      <!-- end swiper-slide -->
-      <div class="swiper-slide">
-        <div class="slide-inner slide-bg-image" data-background="{{ 'slider2.jpeg' | asset_url}}">
-          <!-- <div class="gradient-overlay"></div> -->
-          <div class="container-fluid">
-            <div class="slide-content">
-              <div data-swiper-parallax="300" class="slide-title">
-                <h2>TX2 - VENICE</h2>
-              </div>
-              <div data-swiper-parallax="200" class="slide-title-top">
-                <p>Blue Star Dust || 50 Pieces available</p>
-              </div>
-              <div class="clearfix"></div>
-              <div data-swiper-parallax="500" class="slide-btns">
-                <a href="collection.html" class="theme-btn">SHOP NOW</a>
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="slide-inner slide-bg-image" data-background="{{ block.settings.hero_background_image | image_url: width: 1920 }}">
+            <div class="container-fluid">
+              <div class="slide-content">
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2>{{ block.settings.hero_title }}</h2>
+                </div>
+                <div data-swiper-parallax="200" class="slide-title-top">
+                  <p>{{ block.settings.hero_description }}</p>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                  <a href="{{ block.settings.hero_button_Link }}" class="theme-btn">{{ block.settings.hero_button_text }}</a>
+                </div>
               </div>
             </div>
           </div>
+        <!-- end slide-inner -->
         </div>
-      <!-- end slide-inner -->
-      </div>
+        <!-- end swiper-slide -->
+      {% endfor %}
     <!-- end swiper-slide -->
     </div>
     <!-- end swiper-wrapper -->
@@ -73,3 +34,56 @@
     <div class="swiper-button-prev"></div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "Hero Section",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Slider",
+        "type": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "hero_background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "hero_title",
+            "label": "Hero Section Title",
+            "default": "TX2 - VENICE"
+          },
+          {
+            "type": "text",
+            "id": "hero_description",
+            "label": "Hero Description",
+            "default": "Blue Star Dust || 50 Pieces available"
+          },
+          {
+            "type": "text",
+            "id": "hero_button_text",
+            "label": "Hero Button Text",
+            "default": "SHOP NOW"
+          },
+          {
+            "type": "url",
+            "id": "hero_button_Link",
+            "label": "Hero Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
