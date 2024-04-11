@@ -101,10 +101,50 @@
             "button_text": "SHOP ALL",
             "button_Link": ""
           }
+        },
+        "block_iUHMk6": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/top-c2.jpg",
+            "title": "FIELD",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
+        },
+        "block_jnzdzD": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/top-c3.jpg",
+            "title": "PILOT",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
+        },
+        "block_CXgRAy": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/top-c4.jpg",
+            "title": "MINIMAL",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
+        },
+        "block_ptVqEh": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/top-c5.jpg",
+            "title": "CHRONOGRAPH",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
         }
       },
       "block_order": [
-        "block_BgAKjj"
+        "block_BgAKjj",
+        "block_iUHMk6",
+        "block_jnzdzD",
+        "block_CXgRAy",
+        "block_ptVqEh"
       ],
       "settings": {
         "section_title": "TOP CATEGORIES"
