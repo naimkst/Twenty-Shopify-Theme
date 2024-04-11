@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <div class="row">
         {% for block in section.blocks %}
-          <div class="{% if forloop.index == "1" %}col col-lg-12 col-md-12 col-12 {% else %} col col-lg-6 col-md-6 col-12 {% endif %}">
+          <div class="{% if forloop.index == "1" %} col col-lg-12 col-md-12 col-12 {% else %} col col-lg-6 col-md-6 col-12 {% endif %}">
             <div class="top-category-item wow fadeInUp" data-wow-duration="1000ms">
               <div class="top-category-img">
                 <img
@@ -17,7 +17,7 @@
                   alt="">
               </div>
               <div class="top-category-text">
-                <h2>{{ block.settings.title }}</h2>
+                <h2>{{ forloop.index }}</h2>
                 <a href="{{ block.settings.button_Link }}" class="theme-btn-s3">{{ block.settings.button_text }}</a>
               </div>
             </div>
