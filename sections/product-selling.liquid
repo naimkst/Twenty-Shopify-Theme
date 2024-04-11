@@ -20,7 +20,9 @@
                 id="variant-id"
                 name="id"
                 value="{{ product.variants.first.id }}">
-              <span class="tag {% if product.metafields.product.sale_tag.value == "Sale" %} sale {% endif %}">{{ product.metafields.product.sale_tag.value }}</span>
+              {% if product.metafields.product.sale_tag.value != blank %}
+                <span class="tag {% if product.metafields.product.sale_tag.value == "Sale" %} sale {% endif %}">{{ product.metafields.product.sale_tag.value }}</span>
+              {% endif %}
               <div class="product-image">
                 <img
                   src="{{ product.featured_image | image_url: width: 400  }}"
