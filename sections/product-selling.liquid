@@ -6,7 +6,9 @@
   <div class="product-wrap">
     <div class="container-fluid">
       <div class="row product-active owl-carousel">
-        {% for product in collections['all'].products %}
+        {% assign collections = collections[section.settings.collection].products %}
+
+        {% for product in collections %}
           <div class="product-item wow fadeInUp" data-wow-duration="1{{ forloop.index0 }}00ms">
             <form
               class="form"
@@ -78,6 +80,11 @@
         "type": "url",
         "id": "view_all_url",
         "label": "View All URL"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
       }
     ],
     "presets": [
