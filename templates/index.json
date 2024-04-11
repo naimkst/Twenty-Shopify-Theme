@@ -308,6 +308,21 @@
       ],
       "settings": {
       }
+    },
+    "support_section_XmA9dn": {
+      "type": "support-section",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/top-c1.jpg",
+        "need_help_title": "NEED HELP?",
+        "need_help_description": "Our dedicated team are here to help.",
+        "need_help_button_text": "CHAT NOW",
+        "need_help_button_link": "",
+        "call_us_title": "CALL US",
+        "call_us_description": "Talk to our team 24\/7 about your needs.",
+        "call_us_phone_number": "666-880-33388",
+        "newsletter_title": "NEWSLETTER",
+        "newsletter_description": "And get the scoop on scale & new gear!"
+      }
     }
   },
   "order": [
@@ -322,6 +337,7 @@
     "product_selling_7TpDtx",
     "testimonial_section_WyLHQc",
     "product_selling_AmYJa8",
-    "info_section_txLjdn"
+    "info_section_txLjdn",
+    "support_section_XmA9dn"
   ]
 }
