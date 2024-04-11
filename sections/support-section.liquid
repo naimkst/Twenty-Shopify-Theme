@@ -1,0 +1,148 @@
+<div class="cta-area section-padding" style="background: url({{ section.settings.background_image | image_url: width: 1920 }}) no-repeat center center;  background-size: cover; background-attachment: fixed;">
+  <div class="container">
+    <div class="cta-wrap">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="cta-item wow fadeInUp" data-wow-duration="1200ms">
+            <div class="cta-icon">
+              <i class="fi flaticon-pin"></i>
+            </div>
+            <div class="cta-text">
+              <h2>{{ section.settings.need_help_title }}</h2>
+              <p>{{ section.settings.need_help_description }}</p>
+              <a href="{{ section.settings.need_help_button_link }}" class="theme-btn-s3">{{ section.settings.need_help_button_text }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="cta-item wow fadeInUp" data-wow-duration="1400ms">
+            <div class="cta-icon">
+              <i class="fi flaticon-phone"></i>
+            </div>
+            <div class="cta-text">
+              <h2>
+                {{ section.settings.call_us_title }}</h2>
+              <p>{{ section.settings.call_us_description }}</p>
+              <h4>
+                <a href="tel:{{ section.settings.call_us_phone_number }}">{{ section.settings.call_us_phone_number }}</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="cta-item wow fadeInUp" data-wow-duration="1600ms">
+            <div class="cta-icon">
+              <i class="fi flaticon-mail"></i>
+            </div>
+            <div class="cta-text">
+              <h2>{{ section.settings.newsletter_title }}</h2>
+              <p>
+                {{ section.settings.newsletter_description }}</p>
+              <div class="subscribe-form">
+                {% form 'customer' %}
+                  {%- if form.posted_successfully? -%}
+                    <p
+                      class="form-message form-message--success"
+                      tabindex="-1"
+                      data-form-status>
+                      Thanks for your subscribe!
+                    </p>
+                  {%- endif -%}
+                  <input
+                    type="hidden"
+                    name="contact[tags]"
+                    value="newsletter">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    name="contact[email]">
+                  <button type="button">
+                    <i class="ti-arrow-right"></i>
+                  </button>
+                  {%- if form.errors contains 'email' -%}
+                    <span id="{{ formId }}-email-error" class="input-error-message">
+                      <span class="visually-hidden">Something is wrong!</span>
+                      <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                    </span>
+                  {%- endif -%}
+                {% endform %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Support Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "need_help_title",
+        "label": "Need Help Title",
+        "default": "NEED HELP?"
+      },
+      {
+        "type": "text",
+        "id": "need_help_description",
+        "label": "Need Help Description",
+        "default": "Our dedicated team are here to help."
+      },
+      {
+        "type": "text",
+        "id": "need_help_button_text",
+        "label": "Need Help Button Text",
+        "default": "CHAT NOW"
+      },
+      {
+        "type": "url",
+        "id": "need_help_button_link",
+        "label": "Need Help Button Link"
+      },
+      {
+        "type": "text",
+        "id": "call_us_title",
+        "label": "Call Us Title",
+        "default": "CALL US"
+      },
+      {
+        "type": "text",
+        "id": "call_us_description",
+        "label": "Call Us Description",
+        "default": "Talk to our team 24/7 about your needs."
+      },
+      {
+        "type": "text",
+        "id": "call_us_phone_number",
+        "label": "Call Us Phone Number",
+        "default": "666-880-33388"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_title",
+        "label": "Newsletter Title",
+        "default": "NEWSLETTER"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_description",
+        "label": "Newsletter Description",
+        "default": "And get the scoop on scale & new gear!"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Support Section"
+      }
+    ]
+  }
+{% endschema %}
