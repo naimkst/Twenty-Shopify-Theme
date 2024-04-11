@@ -81,12 +81,21 @@
       ],
       "settings": {
       }
+    },
+    "product_selling_eUqAP7": {
+      "type": "product-selling",
+      "settings": {
+        "section_title": "BEST SELLERS",
+        "view_all_text": "VIEW ALL",
+        "view_all_url": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_section_kbmU9m",
     "categories_section_NLHGzF",
-    "features_section_NRXa4R"
+    "features_section_NRXa4R",
+    "product_selling_eUqAP7"
   ]
 }
