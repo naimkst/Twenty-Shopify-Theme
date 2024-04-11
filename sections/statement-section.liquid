@@ -1,0 +1,86 @@
+<section class="statement-section">
+  <div class="statement-wrap">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col col-lg-6 col-md-12 col-12">
+          <div class="statement-item wow fadeInUp left-category" data-wow-duration="1200ms">
+            <div class="statement-text">
+              <img
+                src="{{ section.settings.logo |  image_url: width: 350 }}"
+                width=""
+                height=""
+                alt="">
+              <span>{{ section.settings.slug }}</span>
+              <h2>{{ section.settings.title }}</h2>
+              <p>{{ section.settings.description }}</p>
+              <a href="{{ section.settings.link }}" class="theme-btn-s2">{{ section.settings.button_text }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col col-lg-6 col-md-12 col-12">
+          <div class="statement-item s2 wow fadeInUp left-category" data-wow-duration="1400ms">
+            <div class="statement-img">
+              <img
+                src="{{ section.settings.image | image_url: width: 800 }}"
+                width=""
+                height=""
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Statement Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "text",
+        "id": "slug",
+        "label": "Slug",
+        "default": "A BOLD STATEMENT"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "ELEVATE YOUR WRIST"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Make a statement with a custom model of you own. choose from a wide range of components to build a watch. fit for you."
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "CUSTOMIZE HERE"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Product Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Statement Section"
+      }
+    ]
+  }
+{% endschema %}
