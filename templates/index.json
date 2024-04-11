@@ -263,6 +263,15 @@
       "settings": {
         "section_title": "What our customers say about us"
       }
+    },
+    "product_selling_AmYJa8": {
+      "type": "product-selling",
+      "settings": {
+        "section_title": "YOU MAY ALSO LIKE",
+        "view_all_text": "VIEW ALL",
+        "view_all_url": "",
+        "collection": "accessories"
+      }
     }
   },
   "order": [
@@ -275,6 +284,7 @@
     "statement_section_DzpQ64",
     "subscribe_section_yMWbhz",
     "product_selling_7TpDtx",
-    "testimonial_section_WyLHQc"
+    "testimonial_section_WyLHQc",
+    "product_selling_AmYJa8"
   ]
 }
