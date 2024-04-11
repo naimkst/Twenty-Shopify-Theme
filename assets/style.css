@@ -3303,10 +3303,12 @@ img {
   color: #fff;
   font-size: 12px;
   z-index: 9;
+  text-transform: uppercase;
 }
 .product-wrap .product-item .tag.sale {
   border: 0;
   background-color: #f14f0e;
+  text-transform: uppercase;
 }
 .product-wrap .product-item .cart-btn {
   width: 110px;
