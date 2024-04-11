@@ -272,6 +272,42 @@
         "view_all_url": "",
         "collection": "accessories"
       }
+    },
+    "info_section_txLjdn": {
+      "type": "info-section",
+      "blocks": {
+        "block_JJyUWt": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/delivery.svg",
+            "title": "COMPLIMENTARY SHIPPING",
+            "description": "Enjoy free shipping on U.S. orders over $100."
+          }
+        },
+        "block_fwJcPJ": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/quality.svg",
+            "title": "CONSCIOUSLY CRAFTED",
+            "description": "Designed with you and the planet in mind."
+          }
+        },
+        "block_T8Cmbb": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/location.svg",
+            "title": "COME SAY HI",
+            "description": "We have 11 stores across the U.S."
+          }
+        }
+      },
+      "block_order": [
+        "block_JJyUWt",
+        "block_fwJcPJ",
+        "block_T8Cmbb"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -285,6 +321,7 @@
     "subscribe_section_yMWbhz",
     "product_selling_7TpDtx",
     "testimonial_section_WyLHQc",
-    "product_selling_AmYJa8"
+    "product_selling_AmYJa8",
+    "info_section_txLjdn"
   ]
 }
