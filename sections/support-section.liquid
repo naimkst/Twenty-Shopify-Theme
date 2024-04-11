@@ -41,14 +41,6 @@
                 {{ section.settings.newsletter_description }}</p>
               <div class="subscribe-form">
                 {% form 'customer' %}
-                  {%- if form.posted_successfully? -%}
-                    <p
-                      class="form-message form-message--success"
-                      tabindex="-1"
-                      data-form-status>
-                      Thanks for your subscribe!
-                    </p>
-                  {%- endif -%}
                   <input
                     type="hidden"
                     name="contact[tags]"
@@ -60,6 +52,16 @@
                   <button type="submit">
                     <i class="ti-arrow-right"></i>
                   </button>
+
+                  {%- if form.posted_successfully? -%}
+                    <p
+                      class="form-message form-message--success"
+                      tabindex="-1"
+                      data-form-status>
+                      Thanks for your subscribe!
+                    </p>
+                  {%- endif -%}
+
                   {%- if form.errors contains 'email' -%}
                     <span id="{{ formId }}-email-error" class="input-error-message">
                       <span class="visually-hidden">Something is wrong!</span>
