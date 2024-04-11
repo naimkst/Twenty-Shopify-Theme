@@ -199,6 +199,15 @@
         "input_text": "Email Address",
         "input_description": "By signing up to the Bremont newsletter you are agreeing to allow us to email you. We will not share your email with any third parties."
       }
+    },
+    "product_selling_7TpDtx": {
+      "type": "product-selling",
+      "settings": {
+        "section_title": "MORE FEATURED PRODUCTS",
+        "view_all_text": "VIEW ALL",
+        "view_all_url": "",
+        "collection": "new"
+      }
     }
   },
   "order": [
@@ -209,6 +218,7 @@
     "product_selling_eUqAP7",
     "top_categories_BdYiQD",
     "statement_section_DzpQ64",
-    "subscribe_section_yMWbhz"
+    "subscribe_section_yMWbhz",
+    "product_selling_7TpDtx"
   ]
 }
