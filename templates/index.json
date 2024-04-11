@@ -208,6 +208,25 @@
         "view_all_url": "",
         "collection": "new"
       }
+    },
+    "testimonial_section_WyLHQc": {
+      "type": "testimonial-section",
+      "blocks": {
+        "block_Ra7FMa": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "block_Ra7FMa"
+      ],
+      "settings": {
+        "section_title": "What our customers say about us"
+      }
     }
   },
   "order": [
@@ -219,6 +238,7 @@
     "top_categories_BdYiQD",
     "statement_section_DzpQ64",
     "subscribe_section_yMWbhz",
-    "product_selling_7TpDtx"
+    "product_selling_7TpDtx",
+    "testimonial_section_WyLHQc"
   ]
 }
