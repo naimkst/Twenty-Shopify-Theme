@@ -227,11 +227,29 @@
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
             "rating": 5
           }
+        },
+        "block_MykqBr": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 4
+          }
+        },
+        "block_aXC6FF": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 2
+          }
         }
       },
       "block_order": [
         "block_Ra7FMa",
-        "block_e3ajh6"
+        "block_e3ajh6",
+        "block_MykqBr",
+        "block_aXC6FF"
       ],
       "settings": {
         "section_title": "What our customers say about us"
