@@ -8,12 +8,36 @@
               <h2>{{ section.settings.section_title }}</h2>
               <p>{{ section.settings.section_description }}</p>
               <div class="subscribe-form">
-                <form action="">
-                  <input type="text" placeholder="{{ section.settings.input_text }}">
-                  <button type="button">
+                {% form 'customer' %}
+
+                  {%- if form.posted_successfully? -%}
+                    <p
+                      class="form-message form-message--success"
+                      tabindex="-1"
+                      data-form-status>
+                      Thanks for your subscribe!
+                    </p>
+                  {%- endif -%}
+
+                  <input
+                    type="hidden"
+                    name="contact[tags]"
+                    value="newsletter">
+                  <input
+                    type="text"
+                    placeholder="{{ section.settings.input_text }}"
+                    name="contact[email]">
+                  <button type="submit">
                     <i class="ti-arrow-right"></i>
                   </button>
-                </form>
+
+                  {%- if form.errors contains 'email' -%}
+                    <span id="{{ formId }}-email-error" class="input-error-message">
+                      <span class="visually-hidden">Something is wrong!</span>
+                      <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                    </span>
+                  {%- endif -%}
+                {% endform %}
                 <p>{{ section.settings.input_description }}</p>
               </div>
               <ul>
