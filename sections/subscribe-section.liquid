@@ -1,0 +1,98 @@
+<section class="subscribe-section">
+  <div class="subscribe-wrap">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col col-lg-12 col-md-12 col-12">
+          <div class="subscribe-item wow fadeInUp left-category" data-wow-duration="1200ms">
+            <div class="subscribe-text">
+              <h2>{{ section.settings.section_title }}</h2>
+              <p>{{ section.settings.section_description }}</p>
+              <div class="subscribe-form">
+                <form action="">
+                  <input type="text" placeholder="{{ section.settings.input_text }}">
+                  <button type="button">
+                    <i class="ti-arrow-right"></i>
+                  </button>
+                </form>
+                <p>{{ section.settings.input_description }}</p>
+              </div>
+              <ul>
+                {% for block in section.blocks %}
+                  <li>
+                    <i><img
+                        src="{{ block.settings.icon | image_url: width: 100 }}"
+                        width=""
+                        height=""
+                        alt=""></i>
+                    <span>{{ block.settings.title }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Subscribe Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "KEEP ME UPDATED"
+      },
+      {
+        "type": "text",
+        "id": "section_description",
+        "label": "Section Description",
+        "default": "Stay up to date with Twenty. Be the first to hear about Twenty exclusive events and new product releases."
+      },
+      {
+        "type": "text",
+        "id": "input_text",
+        "label": "Input Text",
+        "default": "Email Address"
+      },
+      {
+        "type": "text",
+        "id": "input_description",
+        "label": "Input Description",
+        "default": "By signing up to the Bremont newsletter you are agreeing to allow us to email you. We will not share your email with any third parties."
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Features",
+        "type": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "LATEST NEWS"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Subscribe Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
