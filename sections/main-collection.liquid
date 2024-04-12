@@ -3,6 +3,7 @@
   <section class="product-selling-section section-padding">
     <div class="section-title">
       <h2>{{ section.settings.title }}</h2>
+      <h2>{{ page.url }}</h2>
     </div>
 
     <div class="product-wrap">
@@ -26,7 +27,7 @@
                 <input
                   type="hidden"
                   name="return_to"
-                  value="/">
+                  value="{{ page.url }}">
                 <input
                   id="product-count"
                   class="product-count"
@@ -43,7 +44,7 @@
                   </div>
                   <div class="product-info">
                     <h2>
-                      <a href="{{ product.title }}">{{ product.url }}</a>
+                      <a href="{{ product.url }}">{{ product.title }}</a>
                     </h2>
                     <div class="price">
                       <span>{{ product.price | money }}</span>
