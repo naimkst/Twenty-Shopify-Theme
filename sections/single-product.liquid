@@ -1,10 +1,177 @@
-<div class="breadcrumbs-section">
-  <div class="container-fluid">
-    <ul>
-      <li>
-        <a href="index.html">HOME</a>
-      </li>
-      <li>AUTOMATIC BRACELEt 41.5 mm - blue</li>
-    </ul>
+<script>
+  window.product = {{ product | json }} || {}
+</script>
+<script type="application/json">
+  {{ product.variants | json }}
+</script>
+<section class="shop-single-section product-details section-padding pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-7 col-12">
+        <div class="product-single-image">
+          <div class="row">
+            {% for image in product.images %}
+              <div class="col col-lg-6 col-1md-6 col-12">
+                <a class="product-popup" href="{{ image.src | image_url: width: 1920 }}">
+                  <img
+                    src="{{ image.src | image_url: width: 700 }}"
+                    width=""
+                    height=""
+                    alt
+                    class="img img-responsive">
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-5 col-12">
+        <div class="product-details">
+          <small>STEEL / RED</small>
+          <div class="title">
+            <h2>{{ product.title }}</h2>
+            <span>{{ product.price | money }}</span>
+          </div>
+          <ul class="rating">
+            <li>
+              <div
+                class="Stars"
+                style="--rating: 4.5;"
+                aria-label="Rating of this product is 2.3 out of 5."></div>
+            </li>
+            <li>5.0 (2 Reviews)</li>
+          </ul>
+          <p>{{ product.description }}</p>
+
+          <div class="tag-wrap">
+            <h4>STRAP TYPE</h4>
+            <ul>
+              <li>
+                <input
+                  id="size-list-1"
+                  type="radio"
+                  name="size-list-1"
+                  checked>
+                <label for="size-list-1">BLACK LEATHER</label>
+              </li>
+              <li>
+                <input
+                  id="size-list-2"
+                  type="radio"
+                  name="size-list-1">
+                <label for="size-list-2">BROWN LEATHER</label>
+              </li>
+              <li>
+                <input
+                  id="size-list-3"
+                  type="radio"
+                  name="size-list-1">
+                <label for="size-list-3">BLUE LEATHR</label>
+              </li>
+              <li>
+                <input
+                  id="size-list-4"
+                  type="radio"
+                  name="size-list-1">
+                <label for="size-list-4">STEEL BRACELETE</label>
+              </li>
+            </ul>
+          </div>
+          <div class="tag-wrap">
+            <h4>MOVEMENT</h4>
+            <ul>
+              <li>
+                <input
+                  id="number-list-1"
+                  type="radio"
+                  name="size-list-2"
+                  checked>
+                <label for="number-list-1">NH35</label>
+              </li>
+              <li>
+                <input
+                  id="number-list-2"
+                  type="radio"
+                  name="size-list-2">
+                <label for="number-list-2">ETA 2824</label>
+              </li>
+            </ul>
+          </div>
+          <div class="buy-btn">
+            <a href="shop.html" class="theme-btn">ADD TO CART</a>
+          </div>
+
+          <div class="features">
+            <ul>
+              <li>
+                <i><img src="assets/delivery.svg" alt=""></i>Free Shipping</li>
+              <li>
+                <i><img src="assets/quality.svg" alt=""></i>2 year warranty</li>
+              <li>
+                <i><img src="assets/box.svg" alt=""></i>30 Day Returns</li>
+              <li>
+                <i><img src="assets/payment.svg" alt=""></i>Secure Payment</li>
+            </ul>
+          </div>
+
+          <div class="accordion-section">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Key Features
+                  </button>
+                </h3>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt              
+                                                    Jacket has all the classic shirt detailing—collar, cuffs with
+                                                    buttons, and a shirttail hem,</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Dimensions
+                  </button>
+                </h3>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt              
+                                                    Jacket has all the classic shirt detailing—collar, cuffs with
+                                                    buttons, and a shirttail hem,</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- end product details -->
+      </div>
+    <!-- end col -->
+    </div>
+  <!-- end row -->
   </div>
-</div>
+<!-- end of container -->
+</section>
