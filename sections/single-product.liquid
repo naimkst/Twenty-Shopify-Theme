@@ -43,62 +43,40 @@
           </ul>
           <p>{{ product.description }}</p>
 
-          {% for variant in product.variants %}
-            <div class="tag-wrap">
-              <h4>{{ 'products.product.product_variants' | t }}</h4>
-              <ul>
-                <li>
-                  <input
-                    id="size-list-1"
-                    type="radio"
-                    name="size-list-1"
-                    checked>
-                  <label for="size-list-1">BLACK LEATHER</label>
-                </li>
-                <li>
-                  <input
-                    id="size-list-2"
-                    type="radio"
-                    name="size-list-1">
-                  <label for="size-list-2">BROWN LEATHER</label>
-                </li>
-                <li>
-                  <input
-                    id="size-list-3"
-                    type="radio"
-                    name="size-list-1">
-                  <label for="size-list-3">BLUE LEATHR</label>
-                </li>
-                <li>
-                  <input
-                    id="size-list-4"
-                    type="radio"
-                    name="size-list-1">
-                  <label for="size-list-4">STEEL BRACELETE</label>
-                </li>
-              </ul>
-            </div>
-          {% endfor %}
+
           <div class="tag-wrap">
-            <h4>MOVEMENT</h4>
-            <ul>
-              <li>
-                <input
-                  id="number-list-1"
-                  type="radio"
-                  name="size-list-2"
-                  checked>
-                <label for="number-list-1">NH35</label>
-              </li>
-              <li>
-                <input
-                  id="number-list-2"
-                  type="radio"
-                  name="size-list-2">
-                <label for="number-list-2">ETA 2824</label>
-              </li>
-            </ul>
+
+
+            {% if product.variants.size > 1 %}
+              {% for option in product.options %}
+                <h4 data-id="SingleOptionSelector-{{ forloop.index0 }}">
+                  {{ option }}
+                </h4>
+
+                <ul
+                  id="SingleOptionSelector-{{ forloop.index0 }}"
+                  class="single-option-selector single-option-selector-product-template product-form__input"
+                  data-index="option{{ forloop.index }}"
+                  name="id">
+                  {% capture option_index %}option{{ forloop.index }}{% endcapture %}
+                  {% assign option_values = product.variants | map: option_index | uniq %}
+                  {% for choice in option_values %}
+                    <li>
+                      <input
+                        id="size-list-{{ choice }}"
+                        type="radio"
+                        name="size-list"
+                        value="{{ choice }}">
+                      <label for="size-list-{{ choice }}">{{ choice }}</label>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endfor %}
+            {% endif %}
+
           </div>
+
+
           <div class="buy-btn">
             <a href="shop.html" class="theme-btn">ADD TO CART</a>
           </div>
@@ -152,7 +130,7 @@
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                   
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                             
                                                     Jacket has all the classic shirt detailing—collar, cuffs with
                                                     buttons, and a shirttail hem,</p>
                   </div>
@@ -176,7 +154,7 @@
                   aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                   
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                             
                                                     Jacket has all the classic shirt detailing—collar, cuffs with
                                                     buttons, and a shirttail hem,</p>
                   </div>
