@@ -1,8 +1,18 @@
 {
   "sections": {
+    "breadcrumbs_nXnkLL": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
     "main": {
-      "type": "single-product"
+      "type": "single-product",
+      "settings": {
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "breadcrumbs_nXnkLL",
+    "main"
+  ]
 }
