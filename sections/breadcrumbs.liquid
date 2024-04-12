@@ -4,7 +4,7 @@
       <li>
         <a href="/">HOME</a>
       </li>
-      <li>{{ page.title }}</li>
+      <li>{{ section.settings.title }}</li>
     </ul>
   </div>
 </div>
@@ -12,7 +12,14 @@
 {% schema %}
   {
     "name": "Breadcrumbs Section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Page Name"
+      }
+    ],
     "presets": [
       {
         "name": "Breadcrumbs Section"
