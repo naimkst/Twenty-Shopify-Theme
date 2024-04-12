@@ -43,40 +43,42 @@
           </ul>
           <p>{{ product.description }}</p>
 
-          <div class="tag-wrap">
-            <h4>STRAP TYPE</h4>
-            <ul>
-              <li>
-                <input
-                  id="size-list-1"
-                  type="radio"
-                  name="size-list-1"
-                  checked>
-                <label for="size-list-1">BLACK LEATHER</label>
-              </li>
-              <li>
-                <input
-                  id="size-list-2"
-                  type="radio"
-                  name="size-list-1">
-                <label for="size-list-2">BROWN LEATHER</label>
-              </li>
-              <li>
-                <input
-                  id="size-list-3"
-                  type="radio"
-                  name="size-list-1">
-                <label for="size-list-3">BLUE LEATHR</label>
-              </li>
-              <li>
-                <input
-                  id="size-list-4"
-                  type="radio"
-                  name="size-list-1">
-                <label for="size-list-4">STEEL BRACELETE</label>
-              </li>
-            </ul>
-          </div>
+          {% for variant in product.variants %}
+            <div class="tag-wrap">
+              <h4>{{ 'products.product.product_variants' | t }}</h4>
+              <ul>
+                <li>
+                  <input
+                    id="size-list-1"
+                    type="radio"
+                    name="size-list-1"
+                    checked>
+                  <label for="size-list-1">BLACK LEATHER</label>
+                </li>
+                <li>
+                  <input
+                    id="size-list-2"
+                    type="radio"
+                    name="size-list-1">
+                  <label for="size-list-2">BROWN LEATHER</label>
+                </li>
+                <li>
+                  <input
+                    id="size-list-3"
+                    type="radio"
+                    name="size-list-1">
+                  <label for="size-list-3">BLUE LEATHR</label>
+                </li>
+                <li>
+                  <input
+                    id="size-list-4"
+                    type="radio"
+                    name="size-list-1">
+                  <label for="size-list-4">STEEL BRACELETE</label>
+                </li>
+              </ul>
+            </div>
+          {% endfor %}
           <div class="tag-wrap">
             <h4>MOVEMENT</h4>
             <ul>
@@ -104,13 +106,29 @@
           <div class="features">
             <ul>
               <li>
-                <i><img src="assets/delivery.svg" alt=""></i>Free Shipping</li>
+                <i><img
+                    src="{{ 'delivery.svg' | asset_url }}"
+                    width=""
+                    height=""
+                    alt=""></i>Free Shipping</li>
               <li>
-                <i><img src="assets/quality.svg" alt=""></i>2 year warranty</li>
+                <i><img
+                    src="{{ 'quality.svg' | asset_url }}"
+                    width=""
+                    height=""
+                    alt=""></i>2 year warranty</li>
               <li>
-                <i><img src="assets/box.svg" alt=""></i>30 Day Returns</li>
+                <i><img
+                    src="{{ 'box.svg' | asset_url }}"
+                    width=""
+                    height=""
+                    alt=""></i>30 Day Returns</li>
               <li>
-                <i><img src="assets/payment.svg" alt=""></i>Secure Payment</li>
+                <i><img
+                    src="{{ 'payment.svg' | asset_url }}"
+                    width=""
+                    height=""
+                    alt=""></i>Secure Payment</li>
             </ul>
           </div>
 
@@ -134,7 +152,7 @@
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt              
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                   
                                                     Jacket has all the classic shirt detailing—collar, cuffs with
                                                     buttons, and a shirttail hem,</p>
                   </div>
@@ -158,7 +176,7 @@
                   aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt              
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                   
                                                     Jacket has all the classic shirt detailing—collar, cuffs with
                                                     buttons, and a shirttail hem,</p>
                   </div>
