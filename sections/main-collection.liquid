@@ -5,6 +5,8 @@
       <h2>{{ section.settings.title }}</h2>
 
       <h2>{{ page.url }}</h2>
+      <h2>{{ collection.url }}</h2>
+      <h2>{{ canonical_url }}</h2>
     </div>
 
     <div class="product-wrap">
@@ -28,7 +30,7 @@
                 <input
                   type="hidden"
                   name="return_to"
-                  value="{{ page.url }}">
+                  value="{{ collection.url }}">
                 <input
                   id="product-count"
                   class="product-count"
