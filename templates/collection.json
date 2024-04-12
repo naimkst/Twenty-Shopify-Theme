@@ -1,8 +1,29 @@
 {
   "sections": {
     "main": {
-      "type": "main-collection"
+      "type": "main-collection",
+      "blocks": {
+        "block_zjcTMP": {
+          "type": "block",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/w-c1.png",
+            "collection_side_image": "shopify:\/\/shop_images\/wc-2.jpg",
+            "title": "3 HAND COLLECTIONS",
+            "button_text": "SHOP ALL",
+            "button_Link": "shopify:\/\/collections\/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "block_zjcTMP"
+      ],
+      "settings": {
+        "title": "All Collections",
+        "product_limit": 50
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
