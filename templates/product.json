@@ -3,6 +3,7 @@
     "breadcrumbs_nXnkLL": {
       "type": "breadcrumbs",
       "settings": {
+        "title": "Page Name{{ product.title }}"
       }
     },
     "main": {
