@@ -4,6 +4,10 @@
 <script type="application/json">
   {{ product.variants | json }}
 </script>
+
+{%- liquid
+  assign product_form_id = 'product-form-' | append: section.id
+-%}
 <section class="shop-single-section product-details section-padding pt-0">
   <div class="container">
     <div class="row">
@@ -45,14 +49,11 @@
 
 
           <div class="tag-wrap">
-
-
             {% if product.variants.size > 1 %}
               {% for option in product.options %}
                 <h4 data-id="SingleOptionSelector-{{ forloop.index0 }}">
                   {{ option }}
                 </h4>
-
                 <ul
                   id="SingleOptionSelector-{{ forloop.index0 }}"
                   class="single-option-selector single-option-selector-product-template product-form__input"
@@ -60,21 +61,34 @@
                   name="id">
                   {% capture option_index %}option{{ forloop.index }}{% endcapture %}
                   {% assign option_values = product.variants | map: option_index | uniq %}
-                  {% for choice in option_values %}
-                    <li>
+
+                  {% for i in (0..option_values.size) %}
+                    <script>
+                      console.log({{ variant_id | json }})
+                    </script>
+                    {% assign choice = option_values[i] %}
+                    {% assign variant_id = product.variants[i].id %}
+                    {% capture option_id %}option_{{ choice | handle }}{% endcapture %}
+                    <li class="js product-form__input product-form__input--pill">
                       <input
-                        id="size-list-{{ choice }}"
+                        id="{{ choice | handle }}"
                         type="radio"
-                        name="size-list"
-                        value="{{ choice }}">
-                      <label for="size-list-{{ choice }}">{{ choice }}</label>
+                        class="single-option-selector"
+                        name="{{ option | handle }}"
+                        form="{{ product_form_id }}"
+                        value="{{ variant_id | escape }}">
+                      <label for="{{ choice | handle }}">{{ choice }}</label>
                     </li>
                   {% endfor %}
+
                 </ul>
               {% endfor %}
             {% endif %}
 
           </div>
+          <script type="application/json">
+            {{ product.variants | json }}
+          </script>
 
 
           <div class="buy-btn">
@@ -130,7 +144,7 @@
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                             
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                              
                                                     Jacket has all the classic shirt detailing—collar, cuffs with
                                                     buttons, and a shirttail hem,</p>
                   </div>
@@ -154,7 +168,7 @@
                   aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                             
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                              
                                                     Jacket has all the classic shirt detailing—collar, cuffs with
                                                     buttons, and a shirttail hem,</p>
                   </div>
@@ -171,3 +185,47 @@
   </div>
 <!-- end of container -->
 </section>
+
+
+<script>
+  // Define the onVariantChange function
+  function onVariantChange() {
+  // Find the selected variant
+  const selectedVariant = document.querySelector('.single-option-selector input[type="radio"]:checked');
+
+  // If a variant is selected
+  if (selectedVariant) {
+    // Get the variant ID
+    const variantId = selectedVariant.value;
+
+    // Get the current URL
+    let currentUrl = window.location.href;
+
+    // If the current URL contains a variant parameter
+    if (currentUrl.includes('variant=')) {
+      // Replace the existing variant ID with the new one
+      currentUrl = currentUrl.replace(/variant=\d+/, 'variant=' + variantId);
+    } else {
+      // If no variant parameter exists, add it to the URL
+      currentUrl += (currentUrl.includes('?') ? '&' : '?') + 'variant=' + variantId;
+    }
+
+    // Update the URL
+    window.history.pushState({}, '', currentUrl);
+  }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+  // Find all radio buttons for the variant options
+  const radioButtons = document.querySelectorAll('.single-option-selector input[type="radio"]');
+
+  // Add event listener to each radio button
+  radioButtons.forEach(function(radioButton) {
+    radioButton.addEventListener("change", function() {
+      // Call the onVariantChange function when a radio button selection changes
+      onVariantChange();
+    });
+  });
+  });
+
+</script>
