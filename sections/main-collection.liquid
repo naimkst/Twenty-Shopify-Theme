@@ -1,0 +1,146 @@
+<div class="collection-page">
+  <!-- start of product-selling-section -->
+  <section class="product-selling-section section-padding">
+    <div class="section-title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="product-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          {% assign limit = section.settings.product_limit %}
+          {% for product in collection.products limit: limit %}
+            <div class="col col-lg-3 col-md-6 col-12">
+              <form
+                class="form"
+                action="/cart/add"
+                method="post"
+                enctype="multipart/form-data"
+                id="addToCart">
+                <input
+                  type="hidden"
+                  class="variant-idss"
+                  id="variant-id"
+                  name="id"
+                  value="{{ product.variants.first.id }}">
+                <input
+                  type="hidden"
+                  name="return_to"
+                  value="/">
+                <input
+                  id="product-count"
+                  class="product-count"
+                  type="hidden"
+                  value="1"
+                  name="quantity">
+                <div class="product-item wow fadeInUp" data-wow-duration="1000ms">
+                  <div class="product-image">
+                    <img
+                      src="{{ product.featured_image | image_url: width: 600  }}"
+                      width=""
+                      height=""
+                      alt="">
+                  </div>
+                  <div class="product-info">
+                    <h2>
+                      <a href="{{ product.title }}">{{ product.url }}</a>
+                    </h2>
+                    <div class="price">
+                      <span>{{ product.price | money }}</span>
+                    </div>
+                    <button class="cart-btn" type="submit">Add to cart</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- start of collection-section -->
+  <section class="collection-section">
+    <div class="collection-wrap">
+      <div class="container-fluid">
+        <div class="collection-items">
+          <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+            <div class="collection-img">
+              <img src="assets/w-c1.png" alt="">
+            </div>
+            <div class="collection-text">
+              <h2>3 HAND COLLECTIONS</h2>
+              <a href="#" class="shop-all">SHOP ALL</a>
+            </div>
+          </div>
+          <div class="collection-two wow fadeInUp" data-wow-duration="1200ms">
+            <div class="collection-large-img">
+              <img src="assets/wc-2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="collection-items">
+          <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+            <div class="collection-img">
+              <img src="assets/w-c3.png" alt="">
+            </div>
+            <div class="collection-text">
+              <h2>DIVERS collection</h2>
+              <a href="#" class="shop-all">SHOP ALL</a>
+            </div>
+          </div>
+          <div class="collection-two wow fadeInUp" data-wow-duration="1200ms">
+            <div class="collection-large-img">
+              <img src="assets/wc-4.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="collection-items">
+          <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+            <div class="collection-img">
+              <img src="assets/w-c5.png" alt="">
+            </div>
+            <div class="collection-text">
+              <h2>minimal COLLECTION</h2>
+              <a href="#" class="shop-all">SHOP ALL</a>
+            </div>
+          </div>
+          <div class="collection-two wow fadeInUp" data-wow-duration="1200ms">
+            <div class="collection-large-img">
+              <img src="assets/wc-6.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- cta-area -->
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "All Collections"
+      },
+      {
+        "type": "range",
+        "id": "product_limit",
+        "label": "Product Limit",
+        "default": 3,
+        "min": 1,
+        "step": 1,
+        "max": 100
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Section"
+      }
+    ]
+  }
+{% endschema %}

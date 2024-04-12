@@ -22,6 +22,10 @@
                 id="variant-id"
                 name="id"
                 value="{{ product.variants.first.id }}">
+              <input
+                type="hidden"
+                name="return_to"
+                value="/">
               {% if product.metafields.product.sale_tag.value != blank %}
                 <span class="tag {% if product.metafields.product.sale_tag.value == "Sale" %} sale {% endif %}">{{ product.metafields.product.sale_tag.value }}</span>
               {% endif %}
