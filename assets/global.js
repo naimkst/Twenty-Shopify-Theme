@@ -1054,7 +1054,12 @@ class VariantSelects extends HTMLElement {
   updateVariantStatuses() {
     const variantId = document.getElementById('variant_id');
     if (variantId) variantId.value = this.currentVariant.id;
-    console.log(this.currentVariant.id, variantId);
+
+    // const variantPrice = document.getElementById('itemPrice');
+    // if (variantPrice) variantPrice.innerHTML = `${this.currentVariant.price}`;
+
+    // console.log(product, '======', Symbol('product'));
+
     const selectedOptionOneVariants = this.variantData.filter(
       (variant) => this.querySelector(':checked').value === variant.option1
     );
