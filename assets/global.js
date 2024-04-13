@@ -985,12 +985,10 @@ class VariantSelects extends HTMLElement {
 
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {
-      console.log(element.tagName);
       if (element.tagName === 'SELECT') {
         return element.value;
       }
       if (element.tagName === 'FIELDSET') {
-        console.log(Array.from(element.querySelectorAll('input')).find((radio) => radio.checked)?.value);
         return Array.from(element.querySelectorAll('input')).find((radio) => radio.checked)?.value;
       }
     });
@@ -1054,6 +1052,9 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantStatuses() {
+    const variantId = document.getElementById('variant_id');
+    if (variantId) variantId.value = this.currentVariant.id;
+    console.log(this.currentVariant.id, variantId);
     const selectedOptionOneVariants = this.variantData.filter(
       (variant) => this.querySelector(':checked').value === variant.option1
     );

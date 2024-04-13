@@ -90,11 +90,11 @@
 
                       <ul>
                         {% comment %} <legend class="form__label">
-                          {{ option.name }}:
-                          <span data-selected-swatch-value="{{ option.name }}">
-                            {{- option.selected_value -}}
-                          </span>
-                        </legend> {% endcomment %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              {{ option.name }}:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <span data-selected-swatch-value="{{ option.name }}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {{- option.selected_value -}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </legend> {% endcomment %}
                         {% render 'product-variant-options'
                           , product: product
                           , option: option
@@ -150,52 +150,40 @@
               </script>
             </variant-selects>
           {%- endunless -%}
+          <form
+            class="form"
+            action="/cart/add"
+            method="post"
+            enctype="multipart/form-data"
+            id="addToCart">
+            <input
+              type="hidden"
+              class="variant-idss"
+              id="variant-id"
+              name="id"
+              value="{{ product.variants.first.id }}">
+            <input
+              type="hidden"
+              name="return_to"
+              value="{{ product.url }}">
+            <input
+              id="product-count"
+              class="product-count"
+              type="hidden"
+              value="1"
+              name="quantity">
+            <input
+              type="hidden"
+              id="variant_id"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}"
+              class="product-variant-id">
 
+            <div class="buy-btn">
+              <button type="submit" class="theme-btn">ADD TO CART</button>
+            </div>
 
-          <div class="tag-wrap">
-            {% if product.variants.size > 1 %}
-              {% for option in product.options %}
-                <h4 data-id="SingleOptionSelector-{{ forloop.index0 }}">
-                  {{ option }}
-                </h4>
-                <ul
-                  id="SingleOptionSelector-{{ forloop.index0 }}"
-                  class="single-option-selector single-option-selector-product-template product-form__input"
-                  data-index="option{{ forloop.index }}"
-                  name="id">
-                  {% capture option_index %}option{{ forloop.index }}{% endcapture %}
-                  {% assign option_values = product.variants | map: option_index | uniq %}
-
-                  {% for i in (0..option_values.size) %}
-                    {% assign choice = option_values[i] %}
-                    {% assign variant_id = product.variants[i].id %}
-                    {% capture option_id %}option_{{ choice | handle }}{% endcapture %}
-                    <li class="js product-form__input product-form__input--pill">
-                      <input
-                        id="{{ choice | handle }}"
-                        type="radio"
-                        class="single-option-selector"
-                        name="{{ option | handle }}"
-                        form="{{ product_form_id }}"
-                        value="{{ variant_id | escape }}">
-                      <label for="{{ choice | handle }}">{{ choice }}</label>
-                    </li>
-                  {% endfor %}
-
-                </ul>
-              {% endfor %}
-            {% endif %}
-
-          </div>
-          <script type="application/json">
-            {{ product.variants | json }}
-          </script>
-
-
-          <div class="buy-btn">
-            <a href="shop.html" class="theme-btn">ADD TO CART</a>
-          </div>
-
+          </form>
           <div class="features">
             <ul>
               <li>
@@ -245,7 +233,7 @@
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                                                                               Jacket has all the classic shirt detailing—collar, cuffs with
                                                                               buttons, and a shirttail hem,</p>
                   </div>
@@ -269,7 +257,7 @@
                   aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                                                                               Jacket has all the classic shirt detailing—collar, cuffs with
                                                                               buttons, and a shirttail hem,</p>
                   </div>
