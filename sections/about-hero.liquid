@@ -1,0 +1,44 @@
+<!-- start of page-title -->
+<section class="page-title" style="background: url({{section.settings.background_image |  image_url: width: 1920 }}) no-repeat center center;">
+  <div class="container">
+    <div class="page-title-content">
+      <span><img
+          src="{{ section.settings.about_logo |  image_url: width: 300 }}"
+          width=""
+          height=""
+          alt=""></span>
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+  </div>
+</section>
+<!-- end of page-title -->
+
+{% schema %}
+  {
+    "name": "About Hero Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "about_logo",
+        "label": "About Logo"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "About Us"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "About Hero Section"
+      }
+    ]
+  }
+{% endschema %}
