@@ -1,11 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "404",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "about_hero_c3ymei": {
       "type": "about-hero",
       "settings": {
@@ -64,7 +58,6 @@
     }
   },
   "order": [
-    "main",
     "about_hero_c3ymei",
     "about_quote_7b79iN",
     "about_started_pY8T7Q",
