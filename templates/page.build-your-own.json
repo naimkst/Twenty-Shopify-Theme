@@ -1,11 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "404",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "build_section_Jwwhgt": {
       "type": "build-section",
       "settings": {
@@ -113,7 +107,6 @@
     }
   },
   "order": [
-    "main",
     "build_section_Jwwhgt",
     "build_info_ecwetK",
     "subscribe_section_an4kUq",

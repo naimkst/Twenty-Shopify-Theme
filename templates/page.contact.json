@@ -1,11 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "404",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "contact_form_XBWgUb": {
       "type": "contact-form",
       "settings": {
@@ -30,7 +24,6 @@
     }
   },
   "order": [
-    "main",
     "contact_form_XBWgUb",
     "support_section_MG9T4Y"
   ]
