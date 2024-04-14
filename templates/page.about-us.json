@@ -13,10 +13,17 @@
         "about_logo": "shopify:\/\/shop_images\/main-thumb-logo.svg",
         "title": "About Us"
       }
+    },
+    "about_quote_7b79iN": {
+      "type": "about-quote",
+      "settings": {
+        "quote_details": "<p>Fueled by technology, innovation, and unmatched global experience in the high-end watch market, Twenty is the world’s leading platform for buying, selling, and trading pre-owned luxury watches. With offices in the United States, Hong Kong, Switzerland, Singapore, Dubai, and plans to expand beyond, we are the trusted destination for watch enthusiasts worldwide.<\/p>"
+      }
     }
   },
   "order": [
     "main",
-    "about_hero_c3ymei"
+    "about_hero_c3ymei",
+    "about_quote_7b79iN"
   ]
 }
