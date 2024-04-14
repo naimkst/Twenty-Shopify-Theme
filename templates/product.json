@@ -10,10 +10,66 @@
       "type": "single-product",
       "settings": {
       }
+    },
+    "testimonial_section_mehaW6": {
+      "type": "testimonial-section",
+      "blocks": {
+        "block_QUpWEn": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 5
+          }
+        },
+        "block_Upbbgk": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 5
+          }
+        },
+        "block_d9tP4V": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 5
+          }
+        },
+        "block_XERAyH": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 5
+          }
+        },
+        "block_kc9BcE": {
+          "type": "block",
+          "settings": {
+            "name": "Sarah M.",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "block_QUpWEn",
+        "block_Upbbgk",
+        "block_d9tP4V",
+        "block_XERAyH",
+        "block_kc9BcE"
+      ],
+      "settings": {
+        "section_title": "What our customers say about us"
+      }
     }
   },
   "order": [
     "breadcrumbs_nXnkLL",
-    "main"
+    "main",
+    "testimonial_section_mehaW6"
   ]
 }
