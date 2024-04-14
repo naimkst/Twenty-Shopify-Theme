@@ -129,7 +129,7 @@
               <div class="mini-cart">
                 <button class="cart-toggle-btn">
                   <i class="fi flaticon-add-to-cart"></i>
-                  <span class="cart-count">2</span>
+                  <span class="cart-count">{{ cart.item_count }}</span>
                 </button>
                 <div class="mini-cart-content">
                   <div class="title"></div>
@@ -137,84 +137,58 @@
                     <i class="ti-close"></i>
                   </button>
                   <div class="mini-cart-items">
-                    <p class="top-p">Your Cart (1)</p>
+                    <p class="top-p">Your Cart ({{ cart.item_count }})</p>
+                    {% for item in cart.items %}
+                      <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-item-image">
+                          <a href="{{ item.url }}"><img
+                              src="{{ item.image |  image_url: width: 300  }}"
+                              width=""
+                              height=""
+                              alt></a>
+                        </div>
+                        <div class="mini-cart-item-des">
+                          <h4>
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                          </h4>
+                          <ul class="product-text-sub">
+                            <li>
+                              {{ item.variant.title }}
+                            </li>
+                          </ul>
+                          <a
+                            href="#"
+                            onclick="removeItem({{ forloop.index }}, 0)"
+                            class="dlt-btn">
+                            <i class="ti-trash"></i>
+                          </a>
+                        </div>
+                        <div class="pro-single-btn">
+                          <span class="price">{{ item.price | money }}</span>
+                          <div class="quantity cart-plus-minus">
+                            <input
+                              type="text"
+                              value="{{ item.quantity }}"
+                              onkeyup="updateQty({{ forloop.index }})">
+                            <div class="dec qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | minus: 1 }})"></div>
+                            <div class="inc qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | plus: 1 }})"></div>
+                            <div class="dec qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | minus: 1 }})">-</div>
+                            <div class="inc qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | plus: 1 }})">+</div>
+                          </div>
+                        </div>
+                      </div>
+                    {% endfor %}
 
-                    <div
-                      class="mini-cart-item clearfix"
-                      data-bs-toggle="modal"
-                      data-bs-target="#popup-quickview">
-                      <div class="mini-cart-item-image">
-                        <a href="shop.html"><img
-                            src="{{ 'mini1.jpg' | asset_url }}"
-                            width=""
-                            height=""
-                            alt></a>
-                      </div>
-                      <div class="mini-cart-item-des">
-                        <h4>
-                          <a href="product-single.html">TX-VENICE</a>
-                        </h4>
-                        <ul class="product-text-sub">
-                          <li>Black</li>
-                        </ul>
-                        <a href="#" class="dlt-btn">
-                          <i class="ti-trash"></i>
-                        </a>
-                      </div>
-                      <div class="pro-single-btn">
-                        <span class="price">$200.00</span>
-                        <div class="quantity cart-plus-minus">
-                          <input type="text" value="1">
-                          <div class="dec qtybutton"></div>
-                          <div class="inc qtybutton"></div>
-                          <div class="dec qtybutton">-</div>
-                          <div class="inc qtybutton">+</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="mini-cart-item clearfix"
-                      data-bs-toggle="modal"
-                      data-bs-target="#popup-quickview">
-                      <div class="mini-cart-item-image">
-                        <a href="shop.html"><img
-                            src="{{ 'mini2.jpg' | asset_url }}"
-                            width="100%"
-                            height="100%"
-                            alt></a>
-                      </div>
-                      <div class="mini-cart-item-des">
-                        <h4>
-                          <a href="product-single.html">TX-VENICE</a>
-                        </h4>
-                        <ul class="product-text-sub">
-                          <li>Black</li>
-                        </ul>
-                        <a href="#" class="dlt-btn">
-                          <i class="ti-trash"></i>
-                        </a>
-                      </div>
-                      <div class="pro-single-btn">
-                        <span class="price">$200.00</span>
-                        <div class="quantity cart-plus-minus">
-                          <input type="text" value="1">
-                          <div class="dec qtybutton"></div>
-                          <div class="inc qtybutton"></div>
-                          <div class="dec qtybutton">-</div>
-                          <div class="inc qtybutton">+</div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <div class="mini-cart-action clearfix">
                     <ul>
-                      <li>Subtotal(2 items)</li>
+                      <li>Subtotal({{ cart.item_count }} items)</li>
                       <li>
-                        <strong>$68,000</strong>
+                        <strong>{{ cart.items_subtotal_price | money }}</strong>
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="checkout.html" class="view-cart-btn">CONTINUE TO                             
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                     
                                                         CHECKOUT</a>
                     </div>
                   </div>
