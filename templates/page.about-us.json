@@ -62,14 +62,41 @@
         "block_tiWkAz": {
           "type": "block",
           "settings": {
-            "title": "Less than 0.5%",
+            "title": "100%",
             "slug": "of our assortment is responsible.",
-            "description": "For us, that means all our products either contain low-impact, cruelty-free, organic, biodegradable, or recycled fibres, or are manufactured using industry-leading technologies and processes."
+            "description": "For us, that means all our products either contain low-impact, cruelty-free, organic, biodegradable, or recycled fibres, or are manufactured using industry-leading technologies and processes. "
+          }
+        },
+        "block_yLMAnQ": {
+          "type": "block",
+          "settings": {
+            "title": "Less than 0.5%",
+            "slug": "of our products feature virgin polyester.",
+            "description": "We have (almost) eliminated the use of virgin polyester and replaced it with recycled polyester."
+          }
+        },
+        "block_rNW9GY": {
+          "type": "block",
+          "settings": {
+            "title": "100%",
+            "slug": "of our denim collection is designed to be circular.",
+            "description": "All our denim styles are designed to be easily recycled. This means we craft them using conscious materials, salvaged fibres, and zero rivets."
+          }
+        },
+        "block_dLP3bD": {
+          "type": "block",
+          "settings": {
+            "title": "More than 40%",
+            "slug": "of our deliveries were carbon-neutral in 2023.",
+            "description": "Since October 2022, we have been working with our warehousing and last-mile logistics partner, GoBolt, to make our deliveries carbon neutral. Last year, they delivered more than 40% of our packages. 15% of these deliveries were done by Electric Vehicle (EV), and the rest was offset by sequestering carbon."
           }
         }
       },
       "block_order": [
-        "block_tiWkAz"
+        "block_tiWkAz",
+        "block_yLMAnQ",
+        "block_rNW9GY",
+        "block_dLP3bD"
       ],
       "settings": {
         "section_title": "Why Choose Twenty?",
