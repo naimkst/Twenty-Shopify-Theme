@@ -1,0 +1,28 @@
+<section class="about-quote-section section-padding">
+  <div class="container">
+    <div class="about-quote-wrap wow fadeInUp" data-wow-duration="1200ms">
+      {{ section.settings.quote_details }}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "About Quote Section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "quote_details",
+        "label": "Title",
+        "default": "<p>Fueled by technology, innovation, and unmatched global experience in the high-end watch market, Twenty is the world’s leading platform for buying, selling, and trading pre-owned luxury watches. With offices in the United States, Hong Kong, Switzerland, Singapore, Dubai, and plans to expand beyond, we are the trusted destination for watch enthusiasts worldwide.</p>"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "About Quote Section"
+      }
+    ]
+  }
+{% endschema %}
