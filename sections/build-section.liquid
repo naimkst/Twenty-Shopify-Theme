@@ -1,0 +1,79 @@
+<!-- start of build-section -->
+<section class="build-section section-padding">
+  <div class="container">
+    <div class="build-wrap">
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <div class="build-img wow fadeInLeftSlow" data-wow-duration="1200ms">
+            <img src="assets/build.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="build-text wow fadeInRightSlow" data-wow-duration="1200ms">
+            <h2>{{ section.settings.title }}</h2>
+            <p>{{ section.settings.description }}</p>
+            <a href="{{ section.settings.button_link }}" class="theme-btn-s2">{{ section.settings.button_text }}</a>
+            <p>{{ section.settings.details }}</p>
+            <span>{{ section.settings.tagline }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of build-section -->
+
+{% schema %}
+  {
+    "name": "Build Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Started Title",
+        "default": "YOUR BREMONT YOUR WAY"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "description",
+        "default": "Build your own version of the iconic Bremont MBII timepiece, with over 1,000 possible combinations."
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "GET STARTED"
+      },
+      {
+        "type": "text",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "details",
+        "label": "Details",
+        "default": "Custom MBs are made to order, with a current lead time of 8 to 10 weeks. We keep you closely informed if the lead time changes during assembly or manufacturing."
+      },
+      {
+        "type": "text",
+        "id": "tagline",
+        "label": "Tagline",
+        "default": "#MYTWENTY"
+      }
+
+
+    ],
+    "presets": [
+      {
+        "name": "Build Section"
+      }
+    ]
+  }
+{% endschema %}
