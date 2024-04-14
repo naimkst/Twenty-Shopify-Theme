@@ -4,9 +4,22 @@
       "type": "404",
       "settings": {
       }
+    },
+    "build_section_Jwwhgt": {
+      "type": "build-section",
+      "settings": {
+        "title": "YOUR BREMONT YOUR WAY",
+        "description": "Build your own version of the iconic Bremont MBII timepiece, with over 1,000 possible combinations.",
+        "image": "shopify:\/\/shop_images\/wc-4.jpg",
+        "button_text": "GET STARTED",
+        "button_link": "#",
+        "details": "Custom MBs are made to order, with a current lead time of 8 to 10 weeks. We keep you closely informed if the lead time changes during assembly or manufacturing.",
+        "tagline": "#MYTWENTY"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "build_section_Jwwhgt"
   ]
 }
