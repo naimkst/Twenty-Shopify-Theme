@@ -5,7 +5,11 @@
       <div class="row">
         <div class="col-lg-6 col-12">
           <div class="build-img wow fadeInLeftSlow" data-wow-duration="1200ms">
-            <img src="assets/build.jpg" alt="">
+            <img
+              src="{{ section.settings.image |  image_url: width: 900 }}"
+              width=""
+              height=""
+              alt="">
           </div>
         </div>
         <div class="col-lg-6 col-12">
@@ -51,7 +55,7 @@
         "default": "GET STARTED"
       },
       {
-        "type": "text",
+        "type": "url",
         "id": "button_link",
         "label": "Button Link"
       },

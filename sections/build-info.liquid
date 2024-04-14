@@ -1,0 +1,62 @@
+<!-- other-features-area -->
+<div class="other-features-area style-2 section-padding">
+  <div class="container">
+    <div class="other-features-wrap">
+      <div class="row">
+        {% for block in section.blocks %}
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="features-item wow fadeInUp" data-wow-duration="1200ms">
+              <div class="features-icon">
+                <img
+                  src="{{ block.settings.icon |  image_url: width: 1920 }}"
+                  width=""
+                  height=""
+                  alt="">
+              </div>
+              <div class="features-text">
+                <h2>{{ block.settings.title }}</h2>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- other-features-area -->
+
+{% schema %}
+  {
+    "name": "Build info Section",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Build Info",
+        "type": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "HAND BUILT IN THE UK"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Build info Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
