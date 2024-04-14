@@ -110,12 +110,38 @@
       "settings": {
         "section_title": "TOP COLLECTIONS"
       }
+    },
+    "product_selling_KaGdkM": {
+      "type": "product-selling",
+      "settings": {
+        "section_title": "YOU MAY ALSO LIKE",
+        "view_all_text": "VIEW ALL",
+        "view_all_url": "",
+        "collection": "build-your-own"
+      }
+    },
+    "support_section_4yL9gJ": {
+      "type": "support-section",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+        "need_help_title": "NEED HELP?",
+        "need_help_description": "Our dedicated team are here to help.",
+        "need_help_button_text": "CHAT NOW",
+        "need_help_button_link": "",
+        "call_us_title": "CALL US",
+        "call_us_description": "Talk to our team 24\/7 about your needs.",
+        "call_us_phone_number": "666-880-33388",
+        "newsletter_title": "NEWSLETTER",
+        "newsletter_description": "And get the scoop on scale & new gear!"
+      }
     }
   },
   "order": [
     "breadcrumbs_nXnkLL",
     "main",
     "testimonial_section_mehaW6",
-    "top_collection_MMCHkt"
+    "top_collection_MMCHkt",
+    "product_selling_KaGdkM",
+    "support_section_4yL9gJ"
   ]
 }
