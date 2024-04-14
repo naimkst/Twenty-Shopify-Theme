@@ -1,0 +1,292 @@
+<section class="collection-section style-2">
+  <div class="section-title">
+    <h2>{{ section.settings.section_title }}</h2>
+  </div>
+  <div class="collection-wrap">
+    <div class="container-fluid">
+      {% for block in section.blocks %}
+        {% if block.type == "accordion" %}
+          <div class="collection-items">
+            <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+              <div class="accordion-section">
+                <div class="accordion" id="accordion2">
+                  {% if block.settings.specialisation_title != blank %}
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingThree">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="true"
+                          aria-controls="collapseThree">
+                          {{ block.settings.specialisation_title }}
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordion2">
+                        <div class="accordion-body">
+                          {{ block.settings.specialisation_description }}
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.dimensions_title != blank %}
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingFour">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour">
+                          {{ block.settings.dimensions_title }}
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#accordion2">
+                        <div class="accordion-body">
+                          {{ block.settings.dimensions_description }}
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.warranty_title != blank %}
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingFive">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive">
+                          {{ block.settings.warranty_title }}
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseFive"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#accordion2">
+                        <div class="accordion-body">
+                          {{ block.settings.warranty_description }}
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if block.settings.download_title != blank %}
+                    <div class="accordion-item">
+                      <h3 class="accordion-header" id="headingSix">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix">
+                          {{ block.settings.download_title }}
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseSix"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingSix"
+                        data-bs-parent="#accordion2">
+                        <div class="accordion-body">
+                          {{ block.settings.download_description }}
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="collection-two wow fadeInUp" data-wow-duration="1200ms">
+              <div class="collection-large-img">
+                <img
+                  src="{{ block.settings.background_image |  image_url: width: 1920 }}"
+                  width=""
+                  height=""
+                  alt="">
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {% if block.type == "text" %}
+          {% assign alignment = block.settings.alignment %}
+          {% if alignment == "right" %}
+            <div class="collection-items">
+              <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+                <div class="collection-text">
+                  <h2>{{ block.settings.title }}</h2>
+                  {{ block.settings.description }}
+                </div>
+              </div>
+              <div class="collection-two wow fadeInUp" data-wow-duration="1200ms">
+                <div class="collection-large-img">
+                  <img
+                    src="{{ block.settings.background_image |  image_url: width: 1920 }}"
+                    width=""
+                    height=""
+                    alt="">
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <div class="collection-items">
+              <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+                <div class="collection-text">
+                  <h2>{{ block.settings.title }}</h2>
+                  {{ block.settings.description }}
+                </div>
+              </div>
+              <div class="collection-two wow fadeInUp" data-wow-duration="1200ms">
+                <div class="collection-large-img">
+                  <img
+                    src="{{ block.settings.background_image |  image_url: width: 1920 }}"
+                    width=""
+                    height=""
+                    alt="">
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Top Collection Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "TOP COLLECTIONS"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Content",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "radio",
+            "id": "alignment",
+            "label": "Alignment",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "AVENTURINE DIAL"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>The Aventurine Stone Dial, crafted from a real mineral, is a nod to the cosmic inspiration that has become synonymous with Paul Rich timepieces. It's not just a dial; it's a piece of the universe captured in time. This connection to celestial themes is a seamless evolution from the earlier Star Dust Collection, creating a thematic continuity that underscores Paul Rich's narrative.</p>"
+          }
+        ]
+      },
+      {
+        "name": "Accordion",
+        "type": "accordion",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "specialisation_title",
+            "label": "Specialisation Title",
+            "default": "Specialisation"
+          },
+          {
+            "type": "richtext",
+            "id": "specialisation_description",
+            "label": "Specialisation Description",
+            "default": "<p>Shipping: Once an order has been dispatched fromwarehouse, customers will receive an order confirmation email with the relevant tracking number to check the shipment status of their order. Please kindly check the spam inbox, in case the order confirmation email is located there</p><p>Delivery: Our warehouse will process orders starting from the next business day after the order is submitted Please allow 5 business days for delivery. Please note that our delivery time frames are only estimates, and may vary in the event of external factors</p>"
+          },
+          {
+            "type": "text",
+            "id": "dimensions_title",
+            "label": "Dimensions Title",
+            "default": "Dimensions"
+          },
+          {
+            "type": "richtext",
+            "id": "dimensions_description",
+            "label": "Dimensions Description",
+            "default": "<p>Shipping: Once an order has been dispatched fromwarehouse, customers will receive an order confirmation email with the relevant tracking number to check the shipment status of their order. Please kindly check the spam inbox, in case the order confirmation email is located there</p><p>Delivery: Our warehouse will process orders starting from the next business day after the order is submitted Please allow 5 business days for delivery. Please note that our delivery time frames are only estimates, and may vary in the event of external factors</p>"
+          },
+          {
+            "type": "text",
+            "id": "warranty_title",
+            "label": "Warranty Title",
+            "default": "Warranty"
+          },
+          {
+            "type": "richtext",
+            "id": "warranty_description",
+            "label": "Warranty Description",
+            "default": "<p>Shipping: Once an order has been dispatched fromwarehouse, customers will receive an order confirmation email with the relevant tracking number to check the shipment status of their order. Please kindly check the spam inbox, in case the order confirmation email is located there</p><p>Delivery: Our warehouse will process orders starting from the next business day after the order is submitted Please allow 5 business days for delivery. Please note that our delivery time frames are only estimates, and may vary in the event of external factors</p>"
+          },
+          {
+            "type": "text",
+            "id": "download_title",
+            "label": "Download Title",
+            "default": "Download"
+          },
+          {
+            "type": "richtext",
+            "id": "download_description",
+            "label": "Download Description",
+            "default": "<p>Shipping: Once an order has been dispatched fromwarehouse, customers will receive an order confirmation email with the relevant tracking number to check the shipment status of their order. Please kindly check the spam inbox, in case the order confirmation email is located there</p><p>Delivery: Our warehouse will process orders starting from the next business day after the order is submitted Please allow 5 business days for delivery. Please note that our delivery time frames are only estimates, and may vary in the event of external factors</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Top Collection Section",
+        "blocks": [
+          {
+            "type": "accordion"
+          },
+          {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
