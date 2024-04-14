@@ -70,9 +70,6 @@
               </button>
               <ul class="nav navbar-nav mb-2 mb-lg-0">
                 {% for link in linklists[section.settings.menu].links %}
-                  {% comment %} <li>
-                                                                                                    <a href="{{ link.url }}">{{ link.title }}</a>
-                                                                                          </li> {% endcomment %}
                   {% if link.links.size > 0 %}
                     <li class="menu-item-has-children">
                       <a href="{{ link.url }}">{{ link.title }}</a>
@@ -185,7 +182,7 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                     
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                      
                                                         CHECKOUT</a>
                     </div>
                   </div>

@@ -5,90 +5,96 @@
         <div class="col col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
           <div class="widget link-widget">
             <div class="widget-title">
-              <h3>USEFUL LINKS</h3>
+              <h3>{{ section.settings.useful_links_text }}</h3>
             </div>
             <ul>
-              <li><a href="#">Legal & Privacy</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Gift Card</a></li>
-              <li><a href="#">Customer Service</a></li>
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Find A Store</a></li>
+              {% for link in linklists[section.settings.useful_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="col col-lg-2 col-md-4 col-sm-12 col-12">
           <div class="widget link-widget">
             <div class="widget-title">
-              <h3>USEFUL LINKS</h3>
+              <h3>{{ section.settings.quick_links_text }}</h3>
             </div>
             <ul>
-              <li><a href="#">My Profile</a></li>
-              <li><a href="#">My Order History</a></li>
-              <li><a href="#">My Wish List</a></li>
-              <li><a href="#">Order Tracking</a></li>
-              <li><a href="#">Shopping Cart</a></li>
+              {% for link in linklists[section.settings.quick_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="col col-xl-2  col-lg-2 col-md-4 col-sm-12 col-12">
           <div class="widget link-widget custom">
             <div class="widget-title">
-              <h3>COMPANY</h3>
+              <h3>{{ section.settings.company_text }}</h3>
             </div>
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Affiliate</a></li>
-              <li><a href="#">Contact Us</a></li>
+              {% for link in linklists[section.settings.company_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="col col-xl-3  col-lg-3 col-md-6 col-sm-12 col-12">
           <div class="widget link-widget custom">
             <div class="widget-title">
-              <h3>Shop</h3>
+              <h3>{{ section.settings.shop_text }}</h3>
             </div>
             <ul>
-              <li><a href="#">Television</a></li>
-              <li><a href="#">Fridges</a></li>
-              <li><a href="#">Washing Machines</a></li>
-              <li><a href="#">Fans</a></li>
-              <li><a href="#">Air Conditioners</a></li>
-              <li><a href="#">Laptops</a></li>
+              {% for link in linklists[section.settings.shop_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
           <div class="widget subscribe">
             <div class="widget-title">
-              <h3>Contact With Us</h3>
+              <h3>{{ section.settings.contact_with_us_text }}</h3>
             </div>
             <ul class="social">
-              <li>
-                <a href="#">
-                  <i class="ti-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="ti-twitter-alt"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="ti-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="ti-instagram"></i>
-                </a>
-              </li>
+              {% if section.settings.facebook_link != blank %}
+                <li>
+                  <a href="{{ section.settings.facebook_link }}">
+                    <i class="ti-facebook"></i>
+                  </a>
+                </li>
+              {% endif %}
+              {% if section.settings.twitter_link != blank %}
+                <li>
+                  <a href="{{ section.settings.twitter_link }}">
+                    <i class="ti-twitter-alt"></i>
+                  </a>
+                </li>
+              {% endif %}
+              {% if section.settings.linkedin_link != blank %}
+                <li>
+                  <a href="{{ section.settings.linkedin_link }}">
+                    <i class="ti-linkedin"></i>
+                  </a>
+                </li>
+              {% endif %}
+              {% if section.settings.instagram_link != blank %}
+                <li>
+                  <a href="{{ section.settings.instagram_link }}">
+                    <i class="ti-instagram"></i>
+                  </a>
+                </li>
+              {% endif %}
             </ul>
             <div class="widget-title">
-              <h3>Payment method</h3>
+              <h3>{{ section.settings.payment_method_text }}</h3>
               <ul class="payment">
                 <li>
                   <a href="#"><img
@@ -146,3 +152,103 @@
     </div>
   </div>
 </footer>
+
+{% schema %}
+  {
+    "name": "Footer Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "useful_links_text",
+        "label": "Useful Links Text",
+        "default": "USEFUL LINKS"
+      },
+      {
+        "type": "link_list",
+        "id": "useful_links",
+        "label": "Useful Links"
+      },
+      {
+        "type": "text",
+        "id": "quick_links_text",
+        "label": "Quick Links Text",
+        "default": "Quick Links"
+      },
+      {
+        "type": "link_list",
+        "id": "quick_links",
+        "label": "Quick Links"
+      },
+      {
+        "type": "text",
+        "id": "company_text",
+        "label": "Company Text",
+        "default": "COMPANY"
+      },
+      {
+        "type": "link_list",
+        "id": "company_links",
+        "label": "Company Links"
+      },
+      {
+        "type": "text",
+        "id": "shop_text",
+        "label": "Shop Text",
+        "default": "Shop"
+      },
+      {
+        "type": "link_list",
+        "id": "shop_links",
+        "label": "Shop Links"
+      },
+      {
+        "type": "text",
+        "id": "copy_right_text",
+        "label": "Copy Right Text",
+        "default": "© 2024 TWENTY all right reserved"
+      },
+      {
+        "type": "text",
+        "id": "contact_with_us_text",
+        "label": "Contact With Us Text",
+        "default": "Contact With Us"
+      },
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook Link",
+        "default": "https://www.facebook.com/"
+      },
+      {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Twitter Link",
+        "default": "https://twitter.com/"
+      },
+      {
+        "type": "text",
+        "id": "linkedin_link",
+        "label": "Linkedin Link",
+        "default": "https://www.linkedin.com/"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram Link",
+        "default": "https://www.instagram.com/"
+      },
+      {
+        "type": "text",
+        "id": "payment_method_text",
+        "label": "Payment Method Text",
+        "default": "Payment method"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Footer Section"
+      }
+    ]
+  }
+{% endschema %}
