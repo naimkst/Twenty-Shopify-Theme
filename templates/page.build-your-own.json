@@ -16,10 +16,52 @@
         "details": "Custom MBs are made to order, with a current lead time of 8 to 10 weeks. We keep you closely informed if the lead time changes during assembly or manufacturing.",
         "tagline": "#MYTWENTY"
       }
+    },
+    "build_info_ecwetK": {
+      "type": "build-info",
+      "blocks": {
+        "block_cbRBtX": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon1.svg",
+            "title": "HAND BUILT IN THE UK"
+          }
+        },
+        "block_CNgidM": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon2.svg",
+            "title": "3 OR 5 YEAR EXTENSIVE WARRANTY"
+          }
+        },
+        "block_Gyc46a": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon3.svg",
+            "title": "FREE DELIVERY ON ALL TIMEPIECES"
+          }
+        },
+        "block_dqh7xt": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon4.svg",
+            "title": "CONCIERGE DELIVERY SERVICE"
+          }
+        }
+      },
+      "block_order": [
+        "block_cbRBtX",
+        "block_CNgidM",
+        "block_Gyc46a",
+        "block_dqh7xt"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "build_section_Jwwhgt"
+    "build_section_Jwwhgt",
+    "build_info_ecwetK"
   ]
 }
