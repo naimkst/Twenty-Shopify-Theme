@@ -1,0 +1,71 @@
+<div class="collection-page">
+  <!-- start of product-selling-section -->
+  <section class="product-selling-section section-padding">
+    <div class="section-title">
+      <h2>{{ search.terms }}</h2>
+    </div>
+
+    <script>
+      console.log({{ search | json }})
+    </script>
+
+    <div class="product-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          {% if search.results.size > 0 %}
+            {% for product in search.results %}
+              <div class="col col-lg-3 col-md-6 col-12">
+                <form
+                  class="form"
+                  action="/cart/add"
+                  method="post"
+                  enctype="multipart/form-data"
+                  id="addToCart">
+                  <input
+                    type="hidden"
+                    class="variant-idss"
+                    id="variant-id"
+                    name="id"
+                    value="{{ product.variants.first.id }}">
+                  <input
+                    type="hidden"
+                    name="return_to"
+                    value="{{ collection.url }}">
+                  <input
+                    id="product-count"
+                    class="product-count"
+                    type="hidden"
+                    value="1"
+                    name="quantity">
+                  <div class="product-item wow fadeInUp" data-wow-duration="1000ms">
+                    <div class="product-image">
+                      <img
+                        src="{{ product.featured_image | image_url: width: 600  }}"
+                        width=""
+                        height=""
+                        alt="">
+                    </div>
+                    <div class="product-info">
+                      <h2>
+                        <a href="{{ product.url }}">{{ product.title }}</a>
+                      </h2>
+                      <div class="price">
+                        <span>{{ product.price | money }}</span>
+                      </div>
+                      <button class="cart-btn" type="submit">Add to cart</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            {% endfor %}
+          {% else %}
+            <div class="col-12">
+              <h2>No results found</h2>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

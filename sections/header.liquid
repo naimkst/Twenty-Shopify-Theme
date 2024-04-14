@@ -69,13 +69,10 @@
                 <i class="ti-close"></i>
               </button>
               <ul class="nav navbar-nav mb-2 mb-lg-0">
-                <li>
-                  <a href="shop.html">New</a>
-                </li>
                 {% for link in linklists[section.settings.menu].links %}
-                  <li>
-                    <a href="{{ link.url }}">{{ link.title }}</a>
-                  </li>
+                  {% comment %} <li>
+                                                                                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                                                                          </li> {% endcomment %}
                   {% if link.links.size > 0 %}
                     <li class="menu-item-has-children">
                       <a href="{{ link.url }}">{{ link.title }}</a>
@@ -105,12 +102,14 @@
                     <i class="fi flaticon-search"></i>
                   </button>
                   <div class="header-search-form">
-                    <form>
+                    <form class="searchform" action="{{ routes.search_url }}">
                       <div>
                         <input
                           type="text"
                           class="form-control"
-                          placeholder="Search here...">
+                          placeholder="Search here..."
+                          name="q"
+                          value="{{ search.terms | escape }}">
                         <button type="submit">
                           <i class="fi flaticon-search"></i>
                         </button>
@@ -120,7 +119,7 @@
                 </div>
               </div>
               <div class="header-login">
-                <a class="login-btn" href="login.html">
+                <a class="login-btn" href="#">
                   <i class="fi flaticon-user-profile"></i>
                 </a>
               </div>
@@ -186,7 +185,7 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                 
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                     
                                                         CHECKOUT</a>
                     </div>
                   </div>
