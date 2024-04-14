@@ -57,11 +57,49 @@
       ],
       "settings": {
       }
+    },
+    "subscribe_section_an4kUq": {
+      "type": "subscribe-section",
+      "blocks": {
+        "block_7gYKqL": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/email.svg",
+            "title": "LATEST NEWS"
+          }
+        },
+        "block_8ztBUf": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/badge.svg",
+            "title": "EXCLUSIVE EVENTS"
+          }
+        },
+        "block_7gadKC": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/wristwatch.svg",
+            "title": "NEW RELEASES"
+          }
+        }
+      },
+      "block_order": [
+        "block_7gYKqL",
+        "block_8ztBUf",
+        "block_7gadKC"
+      ],
+      "settings": {
+        "section_title": "KEEP ME UPDATED",
+        "section_description": "Stay up to date with Twenty. Be the first to hear about Twenty exclusive events and new product releases.",
+        "input_text": "Email Address",
+        "input_description": "By signing up to the Bremont newsletter you are agreeing to allow us to email you. We will not share your email with any third parties."
+      }
     }
   },
   "order": [
     "main",
     "build_section_Jwwhgt",
-    "build_info_ecwetK"
+    "build_info_ecwetK",
+    "subscribe_section_an4kUq"
   ]
 }
