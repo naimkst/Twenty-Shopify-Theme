@@ -2,11 +2,21 @@
   "sections": {
     "main": {
       "type": "404",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "about_hero_c3ymei": {
+      "type": "about-hero",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/page-title.jpg",
+        "about_logo": "shopify:\/\/shop_images\/main-thumb-logo.svg",
+        "title": "About Us"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "about_hero_c3ymei"
   ]
 }
