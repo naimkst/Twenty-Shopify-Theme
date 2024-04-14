@@ -91,11 +91,21 @@
             "title": "AVENTURINE DIAL",
             "description": "<p>The Aventurine Stone Dial, crafted from a real mineral, is a nod to the cosmic inspiration that has become synonymous with Paul Rich timepieces. It's not just a dial; it's a piece of the universe captured in time. This connection to celestial themes is a seamless evolution from the earlier Star Dust Collection, creating a thematic continuity that underscores Paul Rich's narrative.<\/p>"
           }
+        },
+        "text_a8NzTU": {
+          "type": "text",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+            "alignment": "right",
+            "title": "AVENTURINE DIAL",
+            "description": "<p>The Aventurine Stone Dial, crafted from a real mineral, is a nod to the cosmic inspiration that has become synonymous with Paul Rich timepieces. It's not just a dial; it's a piece of the universe captured in time. This connection to celestial themes is a seamless evolution from the earlier Star Dust Collection, creating a thematic continuity that underscores Paul Rich's narrative.<\/p>"
+          }
         }
       },
       "block_order": [
         "accordion_JeFUVD",
-        "text_xny9Xw"
+        "text_xny9Xw",
+        "text_a8NzTU"
       ],
       "settings": {
         "section_title": "TOP COLLECTIONS"
