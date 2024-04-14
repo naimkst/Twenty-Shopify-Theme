@@ -1,0 +1,56 @@
+<!-- start of started-section -->
+<section class="started-section section-padding">
+  <div class="container">
+    <div class="started-wrap">
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <div class="started-img wow fadeInLeftSlow" data-wow-duration="1200ms">
+            <img
+              src="{{ section.settings.started_image |  image_url: width: 900 }}"
+              width=""
+              height=""
+              alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="started-text wow fadeInRightSlow" data-wow-duration="1200ms">
+            <h2>{{ section.settings.started_title }}</h2>
+            {{ section.settings.started_details }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of started-section -->
+
+{% schema %}
+  {
+    "name": "About Started Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "started_title",
+        "label": "Started Title",
+        "default": "How it all started"
+      },
+      {
+        "type": "richtext",
+        "id": "started_details",
+        "label": "Started Details",
+        "default": " <p>Frank And Oak was founded in Montreal in 2012, with a mission to create an apparel brand that would speak to a new generation of creatives and entrepreneurs.</p> <p>What once started as a favourite in Montreal’s Mile End quickly blossomed into one of Canada’s leading lifestyle brands and digital retailers.</p><p>A certified B Corp, Frank And Oak is now a leader in sustainable fashion and using innovative fabrics from nature to make products that are thoughtfully designed to help you live better, enjoy more, and feel good in everything you wear.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "started_image",
+        "label": "Started Image"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "About Started Section"
+      }
+    ]
+  }
+{% endschema %}

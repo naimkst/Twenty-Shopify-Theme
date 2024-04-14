@@ -1,0 +1,65 @@
+<!-- start of choose-section -->
+<section class="choose-section section-padding pt-0">
+  <div class="container">
+    <div class="choose-wrap">
+      <div class="choose-title">
+        <h2>{{ section.settings.section_title }}</h2>
+      </div>
+      <div class="row">
+        {% for block in section.blocks %}
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="choose-text wow fadeInUp" data-wow-duration="1200ms">
+              <h4>{{ block.settings.title }}</h4>
+              <p>{{ block.settings.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of choose-section -->
+
+{% schema %}
+  {
+    "name": "About Why Choose Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Why Choose Twenty?"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Add Why Choose",
+        "type": "block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Unrivaled Selection"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description",
+            "default": "We are not a marketplace; we own every watch that we sell. This allows us to implement a true global quality standard, and as one of the largest buyers of pre-owned watches worldwide, our selection is ever-changing with thousands of pieces from the best brands available."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Why Choose Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
