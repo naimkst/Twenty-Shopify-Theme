@@ -112,6 +112,28 @@
         "button_link": "#",
         "image": "shopify:\/\/shop_images\/wc-7.jpg"
       }
+    },
+    "main_collection_FNXX7Y": {
+      "type": "main-collection",
+      "blocks": {
+        "block_BLrzAM": {
+          "type": "block",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/wc-7.jpg",
+            "collection_side_image": "shopify:\/\/shop_images\/wc-4.jpg",
+            "title": "3 HAND COLLECTIONS",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_BLrzAM"
+      ],
+      "settings": {
+        "title": "All Collections",
+        "product_limit": 50
+      }
     }
   },
   "order": [
@@ -120,6 +142,7 @@
     "about_started_pY8T7Q",
     "about_why_choose_MBNH8w",
     "about_choose_A6Ynke",
-    "about_global_footprint_JKXTjR"
+    "about_global_footprint_JKXTjR",
+    "main_collection_FNXX7Y"
   ]
 }
