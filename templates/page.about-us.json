@@ -44,11 +44,19 @@
             "title": "Guaranteed Authenticity",
             "description": "Every one of our pre-owned watches are evaluated, authenticated, and brought to manufacturer operating standards without compromising value or provenance. Plus, each pre-owned watch we sell is backed by a 2-year Twenty Global Warranty with additional coverage options available."
           }
+        },
+        "block_PVdppa": {
+          "type": "block",
+          "settings": {
+            "title": "Unrivaled Selection",
+            "description": "Our in-house team of Swiss-trained watchmakers, technicians, and refinishers are among the most highly regarded in the industry. They assess every watch before it’s presented for sale, holding them up to a rigorous quality control process—our team is also qualified to address any watch repair needs."
+          }
         }
       },
       "block_order": [
         "block_MUz4JV",
-        "block_yWjfLV"
+        "block_yWjfLV",
+        "block_PVdppa"
       ],
       "settings": {
         "section_title": "Why Choose Twenty?"
