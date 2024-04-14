@@ -16,10 +16,106 @@
         "details": "Custom MBs are made to order, with a current lead time of 8 to 10 weeks. We keep you closely informed if the lead time changes during assembly or manufacturing.",
         "tagline": "#MYTWENTY"
       }
+    },
+    "build_info_ecwetK": {
+      "type": "build-info",
+      "blocks": {
+        "block_cbRBtX": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon1.svg",
+            "title": "HAND BUILT IN THE UK"
+          }
+        },
+        "block_CNgidM": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon2.svg",
+            "title": "3 OR 5 YEAR EXTENSIVE WARRANTY"
+          }
+        },
+        "block_Gyc46a": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon3.svg",
+            "title": "FREE DELIVERY ON ALL TIMEPIECES"
+          }
+        },
+        "block_dqh7xt": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bicon4.svg",
+            "title": "CONCIERGE DELIVERY SERVICE"
+          }
+        }
+      },
+      "block_order": [
+        "block_cbRBtX",
+        "block_CNgidM",
+        "block_Gyc46a",
+        "block_dqh7xt"
+      ],
+      "settings": {
+      }
+    },
+    "subscribe_section_an4kUq": {
+      "type": "subscribe-section",
+      "blocks": {
+        "block_7gYKqL": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/email.svg",
+            "title": "LATEST NEWS"
+          }
+        },
+        "block_8ztBUf": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/badge.svg",
+            "title": "EXCLUSIVE EVENTS"
+          }
+        },
+        "block_7gadKC": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/wristwatch.svg",
+            "title": "NEW RELEASES"
+          }
+        }
+      },
+      "block_order": [
+        "block_7gYKqL",
+        "block_8ztBUf",
+        "block_7gadKC"
+      ],
+      "settings": {
+        "section_title": "KEEP ME UPDATED",
+        "section_description": "Stay up to date with Twenty. Be the first to hear about Twenty exclusive events and new product releases.",
+        "input_text": "Email Address",
+        "input_description": "By signing up to the Bremont newsletter you are agreeing to allow us to email you. We will not share your email with any third parties."
+      }
+    },
+    "support_section_Ddr48R": {
+      "type": "support-section",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+        "need_help_title": "NEED HELP?",
+        "need_help_description": "Our dedicated team are here to help.",
+        "need_help_button_text": "CHAT NOW",
+        "need_help_button_link": "",
+        "call_us_title": "CALL US",
+        "call_us_description": "Talk to our team 24\/7 about your needs.",
+        "call_us_phone_number": "666-880-33388",
+        "newsletter_title": "NEWSLETTER",
+        "newsletter_description": "And get the scoop on scale & new gear!"
+      }
     }
   },
   "order": [
     "main",
-    "build_section_Jwwhgt"
+    "build_section_Jwwhgt",
+    "build_info_ecwetK",
+    "subscribe_section_an4kUq",
+    "support_section_Ddr48R"
   ]
 }
