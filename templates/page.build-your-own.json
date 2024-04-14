@@ -94,12 +94,28 @@
         "input_text": "Email Address",
         "input_description": "By signing up to the Bremont newsletter you are agreeing to allow us to email you. We will not share your email with any third parties."
       }
+    },
+    "support_section_Ddr48R": {
+      "type": "support-section",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+        "need_help_title": "NEED HELP?",
+        "need_help_description": "Our dedicated team are here to help.",
+        "need_help_button_text": "CHAT NOW",
+        "need_help_button_link": "",
+        "call_us_title": "CALL US",
+        "call_us_description": "Talk to our team 24\/7 about your needs.",
+        "call_us_phone_number": "666-880-33388",
+        "newsletter_title": "NEWSLETTER",
+        "newsletter_description": "And get the scoop on scale & new gear!"
+      }
     }
   },
   "order": [
     "main",
     "build_section_Jwwhgt",
     "build_info_ecwetK",
-    "subscribe_section_an4kUq"
+    "subscribe_section_an4kUq",
+    "support_section_Ddr48R"
   ]
 }
