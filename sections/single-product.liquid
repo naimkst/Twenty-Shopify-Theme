@@ -181,85 +181,101 @@
           </form>
           <div class="features">
             <ul>
-              <li>
-                <i><img
-                    src="{{ 'delivery.svg' | asset_url }}"
-                    width=""
-                    height=""
-                    alt=""></i>Free Shipping</li>
-              <li>
-                <i><img
-                    src="{{ 'quality.svg' | asset_url }}"
-                    width=""
-                    height=""
-                    alt=""></i>2 year warranty</li>
-              <li>
-                <i><img
-                    src="{{ 'box.svg' | asset_url }}"
-                    width=""
-                    height=""
-                    alt=""></i>30 Day Returns</li>
-              <li>
-                <i><img
-                    src="{{ 'payment.svg' | asset_url }}"
-                    width=""
-                    height=""
-                    alt=""></i>Secure Payment</li>
+              {% if product.metafields.product.free_shipping.value != blank %}
+                <li>
+                  <i><img
+                      src="{{ 'delivery.svg' | asset_url }}"
+                      width=""
+                      height=""
+                      alt=""></i>
+                  {{ product.metafields.product.free_shipping.value }}</li>
+              {% endif %}
+
+              {% if product.metafields.product.warranty.value != blank %}
+                <li>
+                  <i><img
+                      src="{{ 'quality.svg' | asset_url }}"
+                      width=""
+                      height=""
+                      alt=""></i>
+                  {{ product.metafields.product.warranty.value }}</li>
+              {% endif %}
+
+              {% if product.metafields.product.returns.value != blank %}
+                <li>
+                  <i><img
+                      src="{{ 'box.svg' | asset_url }}"
+                      width=""
+                      height=""
+                      alt=""></i>
+                  {{ product.metafields.product.returns.value }}</li>
+              {% endif %}
+              {% if product.metafields.product.payment.value != blank %}
+                <li>
+                  <i><img
+                      src="{{ 'payment.svg' | asset_url }}"
+                      width=""
+                      height=""
+                      alt=""></i>
+                  {{ product.metafields.product.payment.value }}</li>
+              {% endif %}
             </ul>
           </div>
 
-          <div class="accordion-section">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingOne">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne">
-                    Key Features
-                  </button>
-                </h3>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-                                                                              Jacket has all the classic shirt detailing—collar, cuffs with
-                                                                              buttons, and a shirttail hem,</p>
+          {% if product.metafields.product.key_features.value != blank or product.metafields.product.dimensions != blank %}
+            <div class="accordion-section">
+              <div class="accordion" id="accordionExample">
+                {% if product.metafields.product.key_features.value != blank %}
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne">
+                        Key Features
+                      </button>
+                    </h3>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        {{ product.metafields.product.key_features | metafield_tag }}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo">
-                    Dimensions
-                  </button>
-                </h3>
-                <div
-                  id="collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Meet your new chilly weather staple. The ReWool® Oversized Shirt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-                                                                              Jacket has all the classic shirt detailing—collar, cuffs with
-                                                                              buttons, and a shirttail hem,</p>
+                {% endif %}
+                {% if product.metafields.product.dimensions != blank %}
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        Dimensions
+                      </button>
+                    </h3>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        {{ product.metafields.product.dimensions | metafield_tag }}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                {% endif %}
               </div>
             </div>
-          </div>
+          {% endif %}
         </div>
       <!-- end product details -->
       </div>
