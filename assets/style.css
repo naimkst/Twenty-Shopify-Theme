@@ -174,7 +174,7 @@ img {
   padding: 5px 10px;
   font-size: 16px;
   text-align: center;
-  display: none;
+  /* display: none; */
 }
 @media (max-width: 767px) {
   .contact-validation-active #success,
