@@ -3,8 +3,8 @@
     <div class="row align-items-center">
       <div class="col-lg-6 offset-lg-3">
         <div class="info-text">
-          <p>Get early access on launches and offers.
-            <a href="#">Sign Up For Texts</a>
+          <p>{{ section.settings.topbar_text }}
+            <a href="{{ section.settings.topbar_link }}">{{ section.settings.topbar_link_text }}</a>
             <i class="ti-arrow-right"></i>
           </p>
         </div>
@@ -13,11 +13,18 @@
         <div class="topbar-select">
           <ul class="topbar-select-wrap">
             <li>
-              <select class="select">
-                <option>English</option>
-                <option>Spanish</option>
-                <option>Hindi</option>
-                <option>Bangla</option>
+              {% comment %} onchange the url will be changed from the value of the select {% endcomment %}
+              <select onchange="window.location = this.options[this.selectedIndex].value" class="select">
+                <option
+                  value="/"
+                  {% if request.path == "/" %}
+                  selected
+                  {% endif %}>English</option>
+                <option
+                  value="/es"
+                  {% if request.path == "/es" %}
+                  selected
+                  {% endif %}>Spanish</option>
               </select>
             </li>
             <li>
@@ -49,8 +56,8 @@
           </div>
           <div class="col-lg-2 col-md-6 col-6">
             <div class="navbar-header">
-              <a class="navbar-brand" href="index.html"><img
-                  src="{{ 'logo.svg' | asset_url}}"
+              <a class="navbar-brand" href="/"><img
+                  src="{{ section.settings.logo | image_url: width: 500 }}"
                   width=""
                   height=""
                   alt="logo"></a>
@@ -65,37 +72,28 @@
                 <li>
                   <a href="shop.html">New</a>
                 </li>
-                <li class="menu-item-has-children">
-                  <a href="#">WATCHES</a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="shop.html">WATCHES</a>
+                {% for link in linklists[section.settings.menu].links %}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                  {% if link.links.size > 0 %}
+                    <li class="menu-item-has-children">
+                      <a href="{{ link.url }}">{{ link.title }}</a>
+                      <ul class="sub-menu">
+                        {% for child_link in link.links %}
+                          <li>
+                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
                     </li>
+                  {% else %}
                     <li>
-                      <a href="shop.html">WATCHES 2</a>
+                      <a href="{{ link.url }}">{{ link.title }}</a>
                     </li>
-                    <li>
-                      <a href="shop.html">WATCHES 3</a>
-                    </li>
-                    <li>
-                      <a href="shop.html">WATCHES 4</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="shop.html">CATEGORY</a>
-                </li>
-                <li>
-                  <a href="shop.html">STRAPS</a>
-                </li>
-                <li>
-                  <a href="shop.html">ACCESSORIES</a>
-                </li>
-                <li>
-                  <a href="BuildYourOwn.html">BUILD YOUR OWN</a>
-                </li>
+                  {% endif %}
+                {% endfor %}
               </ul>
-
             </div>
           <!-- end of nav-collapse -->
           </div>
@@ -188,7 +186,7 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                     
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                 
                                                         CHECKOUT</a>
                     </div>
                   </div>
@@ -202,3 +200,49 @@
     </nav>
   </div>
 </header>
+
+
+{% schema %}
+  {
+    "name": "Header Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon Icon"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu"
+      },
+      {
+        "type": "text",
+        "id": "topbar_text",
+        "label": "Topbar Text",
+        "default": "Get early access on launches and offers."
+      },
+      {
+        "type": "text",
+        "id": "topbar_link_text",
+        "label": "Topbar Link Text",
+        "default": "Sign Up For Texts"
+      },
+      {
+        "type": "url",
+        "id": "topbar_link",
+        "label": "Topbar Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Header Section"
+      }
+    ]
+  }
+{% endschema %}
