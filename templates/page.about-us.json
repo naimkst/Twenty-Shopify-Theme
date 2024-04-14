@@ -102,6 +102,16 @@
         "section_title": "Why Choose Twenty?",
         "section_description": "As watch enthusiasts and experts ourselves, we are committed to the integrity and innovation of the luxury watch industry—which is why we invest in our processes, services, and team."
       }
+    },
+    "about_global_footprint_JKXTjR": {
+      "type": "about-global-footprint",
+      "settings": {
+        "title": "Our Global Footprint",
+        "details": "<p>While our headquarters are located in Pennsylvania, our reach extends far beyond the United States. With offices in Singapore, Switzerland, the United Arab Emirates, and Hong Kong, we’re continuing to look for new areas of opportunity—our New York and Miami offices are coming soon.<\/p>",
+        "button_text": "Explore All Locations",
+        "button_link": "#",
+        "image": "shopify:\/\/shop_images\/wc-7.jpg"
+      }
     }
   },
   "order": [
@@ -109,6 +119,7 @@
     "about_quote_7b79iN",
     "about_started_pY8T7Q",
     "about_why_choose_MBNH8w",
-    "about_choose_A6Ynke"
+    "about_choose_A6Ynke",
+    "about_global_footprint_JKXTjR"
   ]
 }
