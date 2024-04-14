@@ -1,0 +1,87 @@
+<!-- start of choose-section -->
+<section class="choose-section style-2 section-padding">
+  <div class="container">
+    <div class="choose-wrap">
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <div class="choose-text-left wow fadeInLeftSlow" data-wow-duration="1200ms">
+            <div class="left-sticky">
+              <div class="choose-title">
+                <h2>{{ section.settings.section_title }}</h2>
+              </div>
+              <p>{{ section.settings.section_description }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          {% for block in section.blocks %}
+            <div class="choose-text wow fadeInUp" data-wow-duration="1400ms">
+              <h3>{{ block.settings.title }}</h3>
+              <h4>{{ block.settings.slug }}</h4>
+              <p>{{ block.settings.description }}</p>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of choose-section -->
+
+
+{% schema %}
+  {
+    "name": "About Choose Scroll",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Why Choose Twenty?"
+      },
+      {
+        "type": "text",
+        "id": "section_description",
+        "label": "Section Description",
+        "default": "As watch enthusiasts and experts ourselves, we are committed to the integrity and innovation of the luxury watch industry—which is why we invest in our processes, services, and team."
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Add Why Choose",
+        "type": "block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Less than 0.5%"
+          },
+          {
+            "type": "text",
+            "id": "slug",
+            "label": "Slug",
+            "default": "of our assortment is responsible."
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description",
+            "default": "For us, that means all our products either contain low-impact, cruelty-free, organic, biodegradable, or recycled fibres, or are manufactured using industry-leading technologies and processes."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Choose Scroll",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
