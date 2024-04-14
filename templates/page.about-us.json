@@ -27,12 +27,39 @@
         "started_details": "<p>Frank And Oak was founded in Montreal in 2012, with a mission to create an apparel brand that would speak to a new generation of creatives and entrepreneurs.<\/p><p>What once started as a favourite in Montreal’s Mile End quickly blossomed into one of Canada’s leading lifestyle brands and digital retailers.<\/p><p>A certified B Corp, Frank And Oak is now a leader in sustainable fashion and using innovative fabrics from nature to make products that are thoughtfully designed to help you live better, enjoy more, and feel good in everything you wear.<\/p>",
         "started_image": "shopify:\/\/shop_images\/wc-7.jpg"
       }
+    },
+    "about_why_choose_MBNH8w": {
+      "type": "about-why-choose",
+      "blocks": {
+        "block_MUz4JV": {
+          "type": "block",
+          "settings": {
+            "title": "Unrivaled Selection",
+            "description": "We are not a marketplace; we own every watch that we sell. This allows us to implement a true global quality standard, and as one of the largest buyers of pre-owned watches worldwide, our selection is ever-changing with thousands of pieces from the best brands available."
+          }
+        },
+        "block_yWjfLV": {
+          "type": "block",
+          "settings": {
+            "title": "Guaranteed Authenticity",
+            "description": "Every one of our pre-owned watches are evaluated, authenticated, and brought to manufacturer operating standards without compromising value or provenance. Plus, each pre-owned watch we sell is backed by a 2-year Twenty Global Warranty with additional coverage options available."
+          }
+        }
+      },
+      "block_order": [
+        "block_MUz4JV",
+        "block_yWjfLV"
+      ],
+      "settings": {
+        "section_title": "Why Choose Twenty?"
+      }
     }
   },
   "order": [
     "main",
     "about_hero_c3ymei",
     "about_quote_7b79iN",
-    "about_started_pY8T7Q"
+    "about_started_pY8T7Q",
+    "about_why_choose_MBNH8w"
   ]
 }
