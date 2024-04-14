@@ -19,11 +19,20 @@
       "settings": {
         "quote_details": "<p>Fueled by technology, innovation, and unmatched global experience in the high-end watch market, Twenty is the world’s leading platform for buying, selling, and trading pre-owned luxury watches. With offices in the United States, Hong Kong, Switzerland, Singapore, Dubai, and plans to expand beyond, we are the trusted destination for watch enthusiasts worldwide.<\/p>"
       }
+    },
+    "about_started_pY8T7Q": {
+      "type": "about-started",
+      "settings": {
+        "started_title": "How it all started",
+        "started_details": "<p>Frank And Oak was founded in Montreal in 2012, with a mission to create an apparel brand that would speak to a new generation of creatives and entrepreneurs.<\/p><p>What once started as a favourite in Montreal’s Mile End quickly blossomed into one of Canada’s leading lifestyle brands and digital retailers.<\/p><p>A certified B Corp, Frank And Oak is now a leader in sustainable fashion and using innovative fabrics from nature to make products that are thoughtfully designed to help you live better, enjoy more, and feel good in everything you wear.<\/p>",
+        "started_image": "shopify:\/\/shop_images\/wc-7.jpg"
+      }
     }
   },
   "order": [
     "main",
     "about_hero_c3ymei",
-    "about_quote_7b79iN"
+    "about_quote_7b79iN",
+    "about_started_pY8T7Q"
   ]
 }
