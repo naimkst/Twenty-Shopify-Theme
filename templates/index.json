@@ -133,15 +133,6 @@
             "button_text": "SHOP ALL",
             "button_Link": ""
           }
-        },
-        "block_ptVqEh": {
-          "type": "block",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/inspire.jpg",
-            "title": "CHRONOGRAPH",
-            "button_text": "SHOP ALL",
-            "button_Link": ""
-          }
         }
       },
       "block_order": [
@@ -149,8 +140,7 @@
         "block_BgAKjj",
         "block_iUHMk6",
         "block_jnzdzD",
-        "block_CXgRAy",
-        "block_ptVqEh"
+        "block_CXgRAy"
       ],
       "settings": {
         "section_title": "TOP CATEGORIES"
