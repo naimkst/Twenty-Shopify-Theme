@@ -304,6 +304,7 @@
     "support_section_XmA9dn": {
       "type": "support-section",
       "settings": {
+        "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
         "need_help_title": "NEED HELP?",
         "need_help_description": "Our dedicated team are here to help.",
         "need_help_button_text": "CHAT NOW",
