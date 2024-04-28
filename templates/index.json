@@ -149,11 +149,13 @@
     "statement_section_DzpQ64": {
       "type": "statement-section",
       "settings": {
+        "logo": "shopify:\/\/shop_images\/logo.svg",
         "slug": "A BOLD STATEMENT",
         "title": "ELEVATE YOUR WRIST",
         "description": "Make a statement with a custom model of you own. choose from a wide range of components to build a watch. fit for you.",
         "button_text": "CUSTOMIZE HERE",
-        "link": ""
+        "link": "",
+        "image": "shopify:\/\/shop_images\/top-c7.png"
       }
     },
     "subscribe_section_yMWbhz": {
