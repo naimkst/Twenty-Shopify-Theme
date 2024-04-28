@@ -276,13 +276,6 @@
             "description": "Enjoy free shipping on U.S. orders over $100."
           }
         },
-        "block_fwJcPJ": {
-          "type": "block",
-          "settings": {
-            "title": "CONSCIOUSLY CRAFTED",
-            "description": "Designed with you and the planet in mind."
-          }
-        },
         "block_gC3BVe": {
           "type": "block",
           "settings": {
@@ -291,20 +284,19 @@
             "description": "Enjoy free shipping on U.S. orders over $100."
           }
         },
-        "block_T8Cmbb": {
+        "block_fwJcPJ": {
           "type": "block",
           "settings": {
             "background_image": "shopify:\/\/shop_images\/location.svg",
-            "title": "COME SAY HI",
-            "description": "We have 11 stores across the U.S."
+            "title": "CONSCIOUSLY CRAFTED",
+            "description": "Designed with you and the planet in mind."
           }
         }
       },
       "block_order": [
         "block_JJyUWt",
-        "block_fwJcPJ",
         "block_gC3BVe",
-        "block_T8Cmbb"
+        "block_fwJcPJ"
       ],
       "settings": {
       }
