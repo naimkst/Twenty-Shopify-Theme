@@ -164,18 +164,21 @@
         "block_MXqx3x": {
           "type": "block",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/email.svg",
             "title": "LATEST NEWS"
           }
         },
         "block_Ym3CA7": {
           "type": "block",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/badge.svg",
             "title": "EXCLUSIVE EVENTS"
           }
         },
         "block_k6QJPa": {
           "type": "block",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/wristwatch.svg",
             "title": "NEW RELEASES"
           }
         }
