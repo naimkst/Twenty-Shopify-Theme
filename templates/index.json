@@ -89,9 +89,19 @@
     "top_categories_BdYiQD": {
       "type": "top-categories",
       "blocks": {
+        "block_UtFWna": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+            "title": "DIVERS",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
+        },
         "block_BgAKjj": {
           "type": "block",
           "settings": {
+            "background_image": "shopify:\/\/shop_images\/slider2.jpg",
             "title": "DIVERS",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -100,6 +110,7 @@
         "block_iUHMk6": {
           "type": "block",
           "settings": {
+            "background_image": "shopify:\/\/shop_images\/cta-bg.jpg",
             "title": "FIELD",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -108,6 +119,7 @@
         "block_jnzdzD": {
           "type": "block",
           "settings": {
+            "background_image": "shopify:\/\/shop_images\/subscribe.jpg",
             "title": "PILOT",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -116,6 +128,7 @@
         "block_CXgRAy": {
           "type": "block",
           "settings": {
+            "background_image": "shopify:\/\/shop_images\/top-c5.jpg",
             "title": "MINIMAL",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -124,6 +137,7 @@
         "block_ptVqEh": {
           "type": "block",
           "settings": {
+            "background_image": "shopify:\/\/shop_images\/inspire.jpg",
             "title": "CHRONOGRAPH",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -131,6 +145,7 @@
         }
       },
       "block_order": [
+        "block_UtFWna",
         "block_BgAKjj",
         "block_iUHMk6",
         "block_jnzdzD",
