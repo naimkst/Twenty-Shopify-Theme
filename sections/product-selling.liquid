@@ -1,4 +1,4 @@
-<section class="product-selling-section section-padding pt-0">
+<section class="product-selling-section section-padding {% if section.settings.section_layout == "no_padding" %} pt-0 {% endif %}">
   <div class="section-title">
     <h2>{{ section.settings.section_title }}</h2>
   </div>
@@ -89,6 +89,22 @@
         "type": "collection",
         "id": "collection",
         "label": "Collection"
+      },
+      {
+        "type": "radio",
+        "id": "section_layout",
+        "label": "Section Padding",
+        "default": "padding",
+        "options": [
+          {
+            "value": "padding",
+            "label": "Padding"
+          },
+          {
+            "value": "no_padding",
+            "label": "No Padding"
+          }
+        ]
       }
     ],
     "presets": [
