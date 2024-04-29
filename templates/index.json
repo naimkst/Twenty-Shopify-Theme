@@ -53,7 +53,7 @@
         "block_w4rUyX": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/features-2.jpg",
+            "background_image": "shopify:\/\/shop_images\/features-3.jpg",
             "hero_title": "BEST SELLERS",
             "hero_button_text": "SHOP YOUR FVORITES",
             "hero_button_Link": "#"
@@ -62,7 +62,7 @@
         "block_pianCc": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/features-3.jpg",
+            "background_image": "shopify:\/\/shop_images\/features-2.jpg",
             "hero_title": "THE HOLIDAY OUTFIT",
             "hero_button_text": "SHOP OCCASION",
             "hero_button_Link": ""
@@ -83,25 +83,16 @@
         "section_title": "BEST SELLERS",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "fetures"
+        "collection": "features"
       }
     },
     "top_categories_BdYiQD": {
       "type": "top-categories",
       "blocks": {
-        "block_UtFWna": {
-          "type": "block",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
-            "title": "DIVERS",
-            "button_text": "SHOP ALL",
-            "button_Link": ""
-          }
-        },
         "block_BgAKjj": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/slider2.jpg",
+            "background_image": "shopify:\/\/shop_images\/top-c1.jpg",
             "title": "DIVERS",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -110,7 +101,7 @@
         "block_iUHMk6": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/cta-bg.jpg",
+            "background_image": "shopify:\/\/shop_images\/top-c2.jpg",
             "title": "FIELD",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -119,7 +110,7 @@
         "block_jnzdzD": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/subscribe.jpg",
+            "background_image": "shopify:\/\/shop_images\/top-c3.jpg",
             "title": "PILOT",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -128,19 +119,28 @@
         "block_CXgRAy": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/top-c5.jpg",
+            "background_image": "shopify:\/\/shop_images\/top-c4.jpg",
             "title": "MINIMAL",
+            "button_text": "SHOP ALL",
+            "button_Link": ""
+          }
+        },
+        "block_ptVqEh": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/top-c5.jpg",
+            "title": "CHRONOGRAPH",
             "button_text": "SHOP ALL",
             "button_Link": ""
           }
         }
       },
       "block_order": [
-        "block_UtFWna",
         "block_BgAKjj",
         "block_iUHMk6",
         "block_jnzdzD",
-        "block_CXgRAy"
+        "block_CXgRAy",
+        "block_ptVqEh"
       ],
       "settings": {
         "section_title": "TOP CATEGORIES"
@@ -265,7 +265,7 @@
         "section_title": "YOU MAY ALSO LIKE",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "fetures"
+        "collection": "accessories"
       }
     },
     "info_section_txLjdn": {
@@ -279,27 +279,27 @@
             "description": "Enjoy free shipping on U.S. orders over $100."
           }
         },
-        "block_gC3BVe": {
-          "type": "block",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/quality.svg",
-            "title": "COMPLIMENTARY SHIPPING",
-            "description": "Enjoy free shipping on U.S. orders over $100."
-          }
-        },
         "block_fwJcPJ": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/location.svg",
+            "background_image": "shopify:\/\/shop_images\/quality.svg",
             "title": "CONSCIOUSLY CRAFTED",
             "description": "Designed with you and the planet in mind."
+          }
+        },
+        "block_T8Cmbb": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/location.svg",
+            "title": "COME SAY HI",
+            "description": "We have 11 stores across the U.S."
           }
         }
       },
       "block_order": [
         "block_JJyUWt",
-        "block_gC3BVe",
-        "block_fwJcPJ"
+        "block_fwJcPJ",
+        "block_T8Cmbb"
       ],
       "settings": {
       }
@@ -307,7 +307,7 @@
     "support_section_XmA9dn": {
       "type": "support-section",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+        "background_image": "shopify:\/\/shop_images\/top-c1.jpg",
         "need_help_title": "NEED HELP?",
         "need_help_description": "Our dedicated team are here to help.",
         "need_help_button_text": "CHAT NOW",
