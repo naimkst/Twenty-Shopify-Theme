@@ -49,15 +49,15 @@
             <span id="itemPrice" data-currency="{{ shop.money_with_currency_format }}">
               {{ product.selected_or_first_available_variant.price | money }}</span>
           </div>
-          <ul class="rating">
-            <li>
-              <div
-                class="Stars"
-                style="--rating: 4.5;"
-                aria-label="Rating of this product is 2.3 out of 5."></div>
-            </li>
-            <li>5.0 (2 Reviews)</li>
-          </ul>
+          {% comment %} <ul class="rating">
+                        <li>
+                          <div
+                            class="Stars"
+                            style="--rating: 4.5;"
+                            aria-label="Rating of this product is 2.3 out of 5."></div>
+                        </li>
+                        <li>5.0 (2 Reviews)</li>
+                    </ul> {% endcomment %}
           <p>{{ product.description }}</p>
 
 
