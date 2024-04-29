@@ -5164,3 +5164,8 @@ img {
   float: none;
   clear: both;
 } /*# sourceMappingURL=style.css.map */
+
+.category-img img {
+  height: 325px;
+  object-fit: contain;
+}
