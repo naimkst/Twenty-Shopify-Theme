@@ -83,7 +83,8 @@
         "section_title": "BEST SELLERS",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "features"
+        "collection": "features",
+        "section_layout": "no_padding"
       }
     },
     "top_categories_BdYiQD": {
@@ -201,7 +202,8 @@
         "section_title": "MORE FEATURED PRODUCTS",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "new"
+        "collection": "new",
+        "section_layout": "no_padding"
       }
     },
     "testimonial_section_WyLHQc": {
@@ -265,7 +267,8 @@
         "section_title": "YOU MAY ALSO LIKE",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "accessories"
+        "collection": "accessories",
+        "section_layout": "padding"
       }
     },
     "info_section_txLjdn": {
