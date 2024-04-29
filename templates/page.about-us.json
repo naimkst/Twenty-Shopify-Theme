@@ -119,7 +119,7 @@
         "block_BLrzAM": {
           "type": "block",
           "settings": {
-            "collection_image": "shopify:\/\/shop_images\/inspire.jpg",
+            "collection_image": "shopify:\/\/shop_images\/top-c7.png",
             "collection_side_image": "shopify:\/\/shop_images\/top-c5.jpg",
             "title": "3 HAND COLLECTIONS",
             "button_text": "SHOP ALL",
@@ -129,7 +129,7 @@
         "block_qHWpP4": {
           "type": "block",
           "settings": {
-            "collection_image": "shopify:\/\/shop_images\/subscribe.jpg",
+            "collection_image": "shopify:\/\/shop_images\/GMT-02.png",
             "collection_side_image": "shopify:\/\/shop_images\/cta-bg.jpg",
             "title": "DIVERS COLLECTION",
             "button_text": "SHOP ALL",
@@ -139,7 +139,7 @@
         "block_3kwaXw": {
           "type": "block",
           "settings": {
-            "collection_image": "shopify:\/\/shop_images\/slider2.jpg",
+            "collection_image": "shopify:\/\/shop_images\/GMT-01.png",
             "collection_side_image": "shopify:\/\/shop_images\/features-2.jpg",
             "title": "3 HAND COLLECTIONS",
             "button_text": "SHOP ALL",
