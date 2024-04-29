@@ -116,7 +116,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.svg",
+          "logo": "shopify:\/\/shop_images\/logo_c3227794-15d5-4344-946c-4c5b46dcac77.svg",
           "menu": "main-menu",
           "topbar_text": "Get early access on launches and offers.",
           "topbar_link_text": "Sign Up For Texts",
@@ -126,21 +126,6 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "useful_links_text": "USEFUL LINKS",
-          "useful_links": "useful-links",
-          "quick_links_text": "Quick Links",
-          "quick_links": "useful-links-1",
-          "company_text": "COMPANY",
-          "company_links": "company",
-          "shop_text": "Shop",
-          "shop_links": "shop",
-          "copy_right_text": "© 2024 TWENTY all right reserved",
-          "contact_with_us_text": "Contact With Us",
-          "facebook_link": "https:\/\/www.facebook.com\/",
-          "twitter_link": "https:\/\/twitter.com\/",
-          "linkedin_link": "https:\/\/www.linkedin.com\/",
-          "instagram_link": "https:\/\/www.instagram.com\/",
-          "payment_method_text": "Payment method"
         }
       }
     },
