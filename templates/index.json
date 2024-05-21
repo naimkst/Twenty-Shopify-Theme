@@ -6,7 +6,7 @@
         "block_cnXYEa": {
           "type": "block",
           "settings": {
-            "hero_background_image": "shopify:\/\/shop_images\/slider2.jpg",
+            "hero_background_image": "shopify://shop_images/slider2.jpg",
             "hero_title": "TX2 - VENICE",
             "hero_description": "Blue Star Dust || 50 Pieces available",
             "hero_button_text": "SHOP NOW",
@@ -16,7 +16,7 @@
         "block_VPQxkC": {
           "type": "block",
           "settings": {
-            "hero_background_image": "shopify:\/\/shop_images\/slide-1.jpg",
+            "hero_background_image": "shopify://shop_images/slide-1.jpg",
             "hero_title": "TX2 - VENICE",
             "hero_description": "Blue Star Dust || 50 Pieces available",
             "hero_button_text": "SHOP NOW",
@@ -44,7 +44,7 @@
         "block_W9kfzy": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/features-1.jpg",
+            "background_image": "shopify://shop_images/features-1.jpg",
             "hero_title": "NEW ARRIVALS",
             "hero_button_text": "SHOP THE LATEST",
             "hero_button_Link": ""
@@ -53,7 +53,7 @@
         "block_w4rUyX": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/features-3.jpg",
+            "background_image": "shopify://shop_images/features-3.jpg",
             "hero_title": "BEST SELLERS",
             "hero_button_text": "SHOP YOUR FVORITES",
             "hero_button_Link": "#"
@@ -62,7 +62,7 @@
         "block_pianCc": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/features-2.jpg",
+            "background_image": "shopify://shop_images/features-2.jpg",
             "hero_title": "THE HOLIDAY OUTFIT",
             "hero_button_text": "SHOP OCCASION",
             "hero_button_Link": ""
@@ -83,7 +83,8 @@
         "section_title": "BEST SELLERS",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "features"
+        "collection": "fetures",
+        "section_layout": "no_padding"
       }
     },
     "top_categories_BdYiQD": {
@@ -92,7 +93,7 @@
         "block_BgAKjj": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/top-c1.jpg",
+            "background_image": "shopify://shop_images/top-c1.jpg",
             "title": "DIVERS",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -101,7 +102,7 @@
         "block_iUHMk6": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/top-c2.jpg",
+            "background_image": "shopify://shop_images/top-c2.jpg",
             "title": "FIELD",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -110,7 +111,7 @@
         "block_jnzdzD": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/top-c3.jpg",
+            "background_image": "shopify://shop_images/top-c3.jpg",
             "title": "PILOT",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -119,7 +120,7 @@
         "block_CXgRAy": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/top-c4.jpg",
+            "background_image": "shopify://shop_images/top-c4.jpg",
             "title": "MINIMAL",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -128,7 +129,7 @@
         "block_ptVqEh": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/top-c5.jpg",
+            "background_image": "shopify://shop_images/top-c5.jpg",
             "title": "CHRONOGRAPH",
             "button_text": "SHOP ALL",
             "button_Link": ""
@@ -149,13 +150,13 @@
     "statement_section_DzpQ64": {
       "type": "statement-section",
       "settings": {
-        "logo": "shopify:\/\/shop_images\/logo.svg",
+        "logo": "shopify://shop_images/logo.svg",
         "slug": "A BOLD STATEMENT",
         "title": "ELEVATE YOUR WRIST",
         "description": "Make a statement with a custom model of you own. choose from a wide range of components to build a watch. fit for you.",
         "button_text": "CUSTOMIZE HERE",
         "link": "",
-        "image": "shopify:\/\/shop_images\/top-c7.png"
+        "image": "shopify://shop_images/top-c7.png"
       }
     },
     "subscribe_section_yMWbhz": {
@@ -164,21 +165,21 @@
         "block_MXqx3x": {
           "type": "block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/email.svg",
+            "icon": "shopify://shop_images/email.svg",
             "title": "LATEST NEWS"
           }
         },
         "block_Ym3CA7": {
           "type": "block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/badge.svg",
+            "icon": "shopify://shop_images/badge.svg",
             "title": "EXCLUSIVE EVENTS"
           }
         },
         "block_k6QJPa": {
           "type": "block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/wristwatch.svg",
+            "icon": "shopify://shop_images/wristwatch.svg",
             "title": "NEW RELEASES"
           }
         }
@@ -201,7 +202,8 @@
         "section_title": "MORE FEATURED PRODUCTS",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "new"
+        "collection": "new",
+        "section_layout": "no_padding"
       }
     },
     "testimonial_section_WyLHQc": {
@@ -265,7 +267,8 @@
         "section_title": "YOU MAY ALSO LIKE",
         "view_all_text": "VIEW ALL",
         "view_all_url": "",
-        "collection": "accessories"
+        "collection": "accessories",
+        "section_layout": "padding"
       }
     },
     "info_section_txLjdn": {
@@ -274,7 +277,7 @@
         "block_JJyUWt": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/delivery.svg",
+            "background_image": "shopify://shop_images/delivery.svg",
             "title": "COMPLIMENTARY SHIPPING",
             "description": "Enjoy free shipping on U.S. orders over $100."
           }
@@ -282,7 +285,7 @@
         "block_fwJcPJ": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/quality.svg",
+            "background_image": "shopify://shop_images/quality.svg",
             "title": "CONSCIOUSLY CRAFTED",
             "description": "Designed with you and the planet in mind."
           }
@@ -290,7 +293,7 @@
         "block_T8Cmbb": {
           "type": "block",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/location.svg",
+            "background_image": "shopify://shop_images/location.svg",
             "title": "COME SAY HI",
             "description": "We have 11 stores across the U.S."
           }
@@ -307,13 +310,13 @@
     "support_section_XmA9dn": {
       "type": "support-section",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/top-c1.jpg",
+        "background_image": "shopify://shop_images/top-c1.jpg",
         "need_help_title": "NEED HELP?",
         "need_help_description": "Our dedicated team are here to help.",
         "need_help_button_text": "CHAT NOW",
         "need_help_button_link": "",
         "call_us_title": "CALL US",
-        "call_us_description": "Talk to our team 24\/7 about your needs.",
+        "call_us_description": "Talk to our team 24/7 about your needs.",
         "call_us_phone_number": "666-880-33388",
         "newsletter_title": "NEWSLETTER",
         "newsletter_description": "And get the scoop on scale & new gear!"

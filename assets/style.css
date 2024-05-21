@@ -54,7 +54,7 @@ h4,
 h5,
 h6 {
   color: #fff;
-  font-family: 'Gotham';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
 
@@ -316,13 +316,13 @@ img {
 }
 @media (max-width: 575px) {
   .section-title {
-    text-align: left;
+    text-align: center;
   }
 }
 .section-title h2 {
   font-size: 40px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
   line-height: 33.24px;
   text-transform: uppercase;
   margin-top: 0;
@@ -2307,7 +2307,7 @@ img {
     width: 100%;
   }
   .site-header .mobail-menu button {
-    background-color: #f14f0e;
+    /* background-color: #f14f0e; */
     width: 40px;
     height: 35px;
     border: 0;
@@ -5145,6 +5145,18 @@ img {
   .contact-form-area form .submit-area {
     margin-bottom: 0;
   }
+  .mobileHidden {
+    display: none;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .theme-btn,
+  .view-cart-btn,
+  .theme-btn-s2,
+  .theme-btn-s3 {
+    padding: 12px 35px 12px 35px;
+  }
 }
 .contact-form-area form .submit-area .theme-btn,
 .contact-form-area form .submit-area .view-cart-btn {
@@ -5164,3 +5176,8 @@ img {
   float: none;
   clear: both;
 } /*# sourceMappingURL=style.css.map */
+
+.category-img img {
+  height: 325px;
+  object-fit: contain;
+}

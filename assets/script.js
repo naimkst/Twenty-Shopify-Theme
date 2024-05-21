@@ -351,7 +351,7 @@
     $('.product-active').owlCarousel({
       autoplay: true,
       smartSpeed: 300,
-      margin: 20,
+      margin: 10,
       loop: true,
       autoplayHoverPause: true,
       dots: false,
@@ -359,11 +359,11 @@
       nav: false,
       responsive: {
         0: {
-          items: 1,
+          items: 2,
         },
 
         350: {
-          items: 1,
+          items: 2,
         },
         500: {
           items: 2,
