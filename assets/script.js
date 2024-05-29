@@ -1,5 +1,5 @@
 (function ($) {
-  'use strict';
+  ('use strict');
 
   /*------------------------------------------
         = ALL ESSENTIAL FUNCTIONS
@@ -606,4 +606,42 @@
       }, 200)
     );
   });
+
+  /*------------------------------------------
+        = SHOP DETAILS PAGE PRODUCT SLIDER
+    -------------------------------------------*/
+  if ($('.shop-single-slider').length) {
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav',
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 10,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      vertical: true,
+      verticalSwiping: true,
+      focusOnSelect: true,
+      arrows: false,
+
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 5,
+            infinite: true,
+          },
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 5,
+          },
+        },
+      ],
+    });
+  }
 })(window.jQuery);
