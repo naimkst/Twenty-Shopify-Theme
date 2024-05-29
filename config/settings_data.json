@@ -115,6 +115,45 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "block_tiHLHT": {
+            "type": "block",
+            "settings": {
+              "title": "SUMMER SALE DISCOUNT OFF 50%"
+            }
+          },
+          "block_NywFww": {
+            "type": "block",
+            "settings": {
+              "title": "INSTANT DISCOUNT CODE 50% OFF Morange50"
+            }
+          },
+          "block_CETLfV": {
+            "type": "block",
+            "settings": {
+              "title": "FREE SHIPPING FOR ALL ORDERS FROM $60+"
+            }
+          },
+          "block_7Kmtfq": {
+            "type": "block",
+            "settings": {
+              "title": "FREE WORLDWIDE SHIPPING UNTIL FURTHER NOTICE"
+            }
+          },
+          "block_amLjaU": {
+            "type": "block",
+            "settings": {
+              "title": "SUMMER SALE DISCOUNT OFF 50%"
+            }
+          }
+        },
+        "block_order": [
+          "block_tiHLHT",
+          "block_NywFww",
+          "block_CETLfV",
+          "block_7Kmtfq",
+          "block_amLjaU"
+        ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.svg",
           "menu": "main-menu",
