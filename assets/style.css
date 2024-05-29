@@ -3964,9 +3964,12 @@ img {
 .collection-section .collection-items .collection-one {
   flex-basis: 40%;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
   background: #171717;
+}
+.collection-section .collection-items .collection-one.accordionSection {
+  justify-content: start;
 }
 @media (max-width: 1199px) {
   .collection-section .collection-items .collection-one {
