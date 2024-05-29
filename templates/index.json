@@ -324,6 +324,7 @@
     },
     "support_section_gwrd6Y": {
       "type": "support-section",
+      "disabled": true,
       "settings": {
         "need_help_title": "NEED HELP?",
         "need_help_description": "Our dedicated team are here to help.",
