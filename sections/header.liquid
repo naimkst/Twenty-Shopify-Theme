@@ -1,16 +1,9 @@
 <header id="header">
   <div class="marquee">
     <ul>
-      <li>SUMMER SALE DISCOUNT OFF 50%</li>
-      <li>INSTANT DISCOUNT CODE 50% OFF Morange50</li>
-      <li>FREE SHIPPING FOR ALL ORDERS FROM $60+</li>
-      <li>FREE WORLDWIDE SHIPPING UNTIL FURTHER NOTICE</li>
-      <li>SUMMER SALE DISCOUNT OFF 50%</li>
-      <li>SUMMER SALE DISCOUNT OFF 50%</li>
-      <li>INSTANT DISCOUNT CODE 50% OFF Morange50</li>
-      <li>FREE SHIPPING FOR ALL ORDERS FROM $60+</li>
-      <li>FREE WORLDWIDE SHIPPING UNTIL FURTHER NOTICE</li>
-      <li>SUMMER SALE DISCOUNT OFF 50%</li>
+      {% for block in section.blocks %}
+        <li>{{ block.settings.title }}</li>
+      {% endfor %}
     </ul>
   </div>
   <div class="topbar">
@@ -196,7 +189,7 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                   
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                
                                                         CHECKOUT</a>
                     </div>
                   </div>
@@ -244,9 +237,28 @@
         "label": "Topbar Link"
       }
     ],
+    "blocks": [
+      {
+        "name": "Add Slider Text",
+        "type": "block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "SUMMER SALE DISCOUNT OFF 50%"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
-        "name": "Header Section"
+        "name": "Header Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
       }
     ]
   }
