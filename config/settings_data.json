@@ -171,7 +171,7 @@
           "quick_links": "useful-links-1",
           "company_text": "COMPANY",
           "company_links": "company",
-          "shop_text": "Shop",
+          "shop_text": "WATCHES",
           "shop_links": "shop",
           "copy_right_text": "© 2024 TWENTY all right reserved",
           "contact_with_us_text": "Contact With Us",
@@ -179,7 +179,7 @@
           "twitter_link": "https:\/\/twitter.com\/",
           "linkedin_link": "https:\/\/www.linkedin.com\/",
           "instagram_link": "https:\/\/www.instagram.com\/",
-          "payment_method_text": "Payment method"
+          "payment_method_text": ""
         }
       }
     },
