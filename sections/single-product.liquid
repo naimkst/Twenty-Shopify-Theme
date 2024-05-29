@@ -24,22 +24,35 @@
   <div class="container">
     <div class="row">
       <div class="col col-lg-7 col-12">
-        <div class="product-single-image">
+
+        <div class="shop-single-slider">
           <div class="row">
-            {% for image in product.images %}
-              <div class="col col-lg-6 col-1md-6 col-12">
-                <a class="product-popup" href="{{ image.src | image_url: width: 1920 }}">
-                  <img
-                    src="{{ image.src | image_url: width: 700 }}"
-                    width=""
-                    height=""
-                    alt
-                    class="img img-responsive">
-                </a>
+            <div class="col col-lg-2 col-2">
+              <div class="slider-nav left-side">
+                {% for image in product.images %}
+                  <div><img
+                      src="{{ image.src | image_url: width: 400 }}"
+                      width=""
+                      height=""
+                      alt></div>
+                {% endfor %}
               </div>
-            {% endfor %}
+            </div>
+            <div class="col col-lg-10 col col-10">
+              <div class="slider-for">
+                {% for image in product.images %}
+                  <div><img
+                      src="{{ image.src | image_url: width: 900 }}"
+                      width=""
+                      height=""
+                      alt></div>
+                {% endfor %}
+              </div>
+            </div>
           </div>
         </div>
+
+
       </div>
       <div class="col col-lg-5 col-12">
         <div class="product-details">
@@ -50,14 +63,14 @@
               {{ product.selected_or_first_available_variant.price | money }}</span>
           </div>
           {% comment %} <ul class="rating">
-                        <li>
-                          <div
-                            class="Stars"
-                            style="--rating: 4.5;"
-                            aria-label="Rating of this product is 2.3 out of 5."></div>
-                        </li>
-                        <li>5.0 (2 Reviews)</li>
-                    </ul> {% endcomment %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            class="Stars"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            style="--rating: 4.5;"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            aria-label="Rating of this product is 2.3 out of 5."></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li>5.0 (2 Reviews)</li>
+                                                                                                                                                                                                                                                                                                                                                                                            </ul> {% endcomment %}
           <p>{{ product.description }}</p>
 
 

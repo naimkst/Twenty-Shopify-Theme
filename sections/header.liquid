@@ -1,4 +1,11 @@
 <header id="header">
+  <div class="marquee">
+    <ul>
+      {% for block in section.blocks %}
+        <li>{{ block.settings.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
   <div class="topbar">
     <div class="row align-items-center">
       <div class="col-lg-6 offset-lg-3">
@@ -182,7 +189,7 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                
                                                         CHECKOUT</a>
                     </div>
                   </div>
@@ -230,9 +237,28 @@
         "label": "Topbar Link"
       }
     ],
+    "blocks": [
+      {
+        "name": "Add Slider Text",
+        "type": "block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "SUMMER SALE DISCOUNT OFF 50%"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
-        "name": "Header Section"
+        "name": "Header Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
       }
     ]
   }

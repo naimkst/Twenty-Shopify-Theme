@@ -7,7 +7,7 @@
       {% for block in section.blocks %}
         {% if block.type == "accordion" %}
           <div class="collection-items">
-            <div class="collection-one wow fadeInUp" data-wow-duration="1000ms">
+            <div class="collection-one {% if block.type == "accordion" %} accordionSection {% endif %} wow fadeInUp" data-wow-duration="1000ms">
               <div class="accordion-section">
                 <div class="accordion" id="accordion2">
                   {% if block.settings.specialisation_title != blank %}

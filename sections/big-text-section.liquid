@@ -1,0 +1,40 @@
+<!-- start of dcta-section -->
+<section class="dcta-section section-padding">
+  <div class="container">
+    <div class="dcta-wrap">
+      <h2>{{ section.settings.title }}</h2>
+      <a href="{{ section.settings.button_link }}" class="theme-btn">{{ section.settings.button_text }}</a>
+    </div>
+  </div>
+</section>
+<!-- end of dcta-section -->
+
+{% schema %}
+  {
+    "name": "Big Text With Button",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Started Title",
+        "default": "WATCHES INSPIRED FROM THE PAST, MADE FOR TODAY."
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "DISCOVER OUR HISTORY"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Big Text With Button"
+      }
+    ]
+  }
+{% endschema %}
