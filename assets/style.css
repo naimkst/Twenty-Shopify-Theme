@@ -3321,7 +3321,8 @@ img {
   text-transform: uppercase;
 }
 .product-wrap .product-item .cart-btn {
-  width: 110px;
+  min-width: 110px;
+  /* width: 110px; */
   /* height: 35px; */
   line-height: 35px;
   text-align: center;
