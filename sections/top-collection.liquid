@@ -1,7 +1,13 @@
-<section class="collection-section style-2">
-  <div class="section-title">
-    <h2>{{ section.settings.section_title }}</h2>
-  </div>
+<section
+  class="collection-section style-2 {% if section.settings.padding == "padding" %} {% endif %}"
+  {% if section.settings.padding == "no_padding" %}
+  style="padding-top: 0px"
+  {% endif %}>
+  {% if section.settings.section_title != blank %}
+    <div class="section-title">
+      <h2>{{ section.settings.section_title }}</h2>
+    </div>
+  {% endif %}
   <div class="collection-wrap">
     <div class="container-fluid">
       {% for block in section.blocks %}
@@ -174,6 +180,22 @@
         "id": "section_title",
         "label": "Section Title",
         "default": "TOP COLLECTIONS"
+      },
+      {
+        "type": "radio",
+        "id": "padding",
+        "label": "Padding",
+        "default": "no_padding",
+        "options": [
+          {
+            "value": "no_padding",
+            "label": "No Padding"
+          },
+          {
+            "value": "padding",
+            "label": "Padding"
+          }
+        ]
       }
     ],
     "blocks": [

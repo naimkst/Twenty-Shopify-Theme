@@ -6,6 +6,14 @@ function getFocusableElements(container) {
   );
 }
 
+function formatPrice(priceInCents) {
+  // Convert cents to dollars
+  var priceInDollars = priceInCents / 100;
+
+  // Format to two decimal places
+  return priceInDollars.toFixed(2);
+}
+
 document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
   summary.setAttribute('role', 'button');
   summary.setAttribute('aria-expanded', summary.parentNode.hasAttribute('open'));
@@ -1055,10 +1063,10 @@ class VariantSelects extends HTMLElement {
     const variantId = document.getElementById('variant_id');
     if (variantId) variantId.value = this.currentVariant.id;
 
-    // const variantPrice = document.getElementById('itemPrice');
-    // if (variantPrice) variantPrice.innerHTML = `${this.currentVariant.price}`;
-
-    // console.log(product, '======', Symbol('product'));
+    const variantPrice = document.getElementById('itemPrice');
+    var dataCurrencty = variantPrice.getAttribute('data-currency');
+    var formattedPrice = formatPrice(this.currentVariant?.price);
+    if (variantPrice) variantPrice.innerHTML = dataCurrencty + formattedPrice;
 
     const selectedOptionOneVariants = this.variantData.filter(
       (variant) => this.querySelector(':checked').value === variant.option1
@@ -1162,9 +1170,8 @@ class VariantSelects extends HTMLElement {
       });
     }
 
-    document
-      .querySelector(`[id^="MediaGallery-${this.dataset.section}"]`)
-      .setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media?.id}`);
+    document.querySelector(`[id^="MediaGallery-${this.dataset.section}"]`);
+    // .setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media?.id}`);
 
     // update media modal
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
@@ -1242,18 +1249,18 @@ class VariantSelects extends HTMLElement {
         if (inventoryDestination) inventoryDestination.classList.toggle('hidden', inventorySource.innerText === '');
 
         const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
-        this.toggleAddButton(
-          addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
-          window.variantStrings.soldOut
-        );
+        // this.toggleAddButton(
+        //   addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true
+        //   // window.variantStrings.soldOut
+        // );
 
-        publish(PUB_SUB_EVENTS.variantChange, {
-          data: {
-            sectionId,
-            html,
-            variant: this.currentVariant,
-          },
-        });
+        // publish(PUB_SUB_EVENTS.variantChange, {
+        //   data: {
+        //     sectionId,
+        //     html,
+        //     variant: this.currentVariant,
+        //   },
+        // });
       });
   }
 

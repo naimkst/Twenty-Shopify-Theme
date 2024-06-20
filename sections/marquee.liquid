@@ -1,0 +1,38 @@
+<div class="marquee">
+  <ul>
+    {% for block in section.blocks %}
+      <li>{{ block.settings.title }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Marquee Section",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Add Slider Text",
+        "type": "block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "SUMMER SALE DISCOUNT OFF 50%"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Marquee Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

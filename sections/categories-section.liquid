@@ -4,20 +4,21 @@
       <h2>{{ section.settings.category_title }}</h2>
     </div>
     <div class="category-slider category-slider-active owl-carousel">
-      {% for product in collections['all'].products %}
+      {% for product in collections %}
         <div class="category-item">
           <div class="category-img">
-            <img
-              src="{{ product.featured_image | image_url: width: 400  }}"
-              width=""
-              height=""
-              alt="">
-            <a href="{{ product.url }}" class="bottom-btn">{{ product.title }}</a>
+            <a href="{{ product.url }}">
+              <img
+                src="{{ product.image.src | image_url: width: 400  }}"
+                width=""
+                height=""
+                alt="">
+            </a>
+            <a href="{{ product.url }}" class="bottom-btn">{{ product.title }} ({{ product.products_count }})</a>
           </div>
-          {% for collection in product.collections limit: 1 %}
-            <a href="{{ collection.url }}">{{ collection.title }}</a>
-          {% endfor %}
-
+        {% comment %} {% for collection in product.collections limit: 1 %}
+                    <a href="{{ collection.url }}">{{ collection.title }}</a>
+        {% endfor %} {% endcomment %}
         </div>
       {% endfor %}
     </div>

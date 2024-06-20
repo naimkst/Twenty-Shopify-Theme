@@ -55,7 +55,7 @@ h5,
 h6 {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 ul {
@@ -335,6 +335,7 @@ img {
   .section-title h2 {
     font-size: 32px;
     line-height: 40px;
+    margin-left: 0px;
   }
 }
 @media (max-width: 450px) {
@@ -3664,7 +3665,7 @@ img {
 .subscribe-section .subscribe-text h2 {
   font-size: 40px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
   line-height: 33.24px;
   text-transform: uppercase;
   margin-top: 0;
