@@ -166,9 +166,9 @@
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.svg",
           "menu": "main-menu",
-          "topbar_text": "",
-          "topbar_link_text": "",
-          "topbar_link": ""
+          "topbar_text": "Get early access on launches and offers.",
+          "topbar_link_text": "Sign Up",
+          "topbar_link": "shopify:\/\/pages\/contact"
         }
       },
       "footer": {
