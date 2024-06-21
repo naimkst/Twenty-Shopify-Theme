@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "breadcrumbs_nXnkLL": {
@@ -74,7 +83,7 @@
           "settings": {
             "background_image": "shopify:\/\/shop_images\/wc-7.jpg",
             "specialisation_title": "KEY SPECIFICATIONS",
-            "specialisation_description": "<p>• Unidirectional Bezel<\/p><p>• 316L High Grade Stainless Steel<\/p><p>• Professional Divers<\/p><p>• Water Resistant - 10ATM \/ 100M<\/p><p>• Sapphire Crystal<\/p>",
+            "specialisation_description": "<p>• Unidirectional Bezel<\/p><p>• 316L High Grade Stainless Steel<\/p><p>• Professional Divers<\/p><p>• Water Resistant - 20ATM \/ 100M<\/p><p>• Sapphire Crystal<\/p>",
             "dimensions_title": "DIMENSIONS",
             "dimensions_description": "<p>Shipping: Once an order has been dispatched fromwarehouse, customers will receive an order confirmation email with the relevant tracking number to check the shipment status of their order. Please kindly check the spam inbox, in case the order confirmation email is located there<\/p><p>Delivery: Our warehouse will process orders starting from the next business day after the order is submitted Please allow 5 business days for delivery. Please note that our delivery time frames are only estimates, and may vary in the event of external factors<\/p>",
             "warranty_title": "WARRANTY",
@@ -108,7 +117,8 @@
         "text_a8NzTU"
       ],
       "settings": {
-        "section_title": ""
+        "section_title": "",
+        "padding": "no_padding"
       }
     },
     "product_selling_KaGdkM": {
