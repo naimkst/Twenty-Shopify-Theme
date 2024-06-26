@@ -538,7 +538,7 @@ img {
 .breadcrumbs-section {
   margin-bottom: 40px;
   background: #3c3c3c;
-  padding: 20px;
+  padding: 10px 20px;
 }
 .breadcrumbs-section h3 {
   font-size: 40px;
@@ -3984,7 +3984,7 @@ img {
   background: #171717;
 }
 .collection-section .collection-items .collection-one.accordionSection {
-  justify-content: start;
+  justify-content: center;
 }
 @media (max-width: 1199px) {
   .collection-section .collection-items .collection-one {
@@ -5547,6 +5547,9 @@ img {
   .footerText {
     flex-direction: column;
     gap: 10px;
+  }
+  .features-icon {
+    margin-top: 15px;
   }
 }
 @media (max-width: 450px) {
