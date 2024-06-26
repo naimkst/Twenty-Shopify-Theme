@@ -12,7 +12,7 @@
     "breadcrumbs_nXnkLL": {
       "type": "breadcrumbs",
       "settings": {
-        "title": "Page Name{{ product.title }}"
+        "title": "{{ product.title }}"
       }
     },
     "main": {
