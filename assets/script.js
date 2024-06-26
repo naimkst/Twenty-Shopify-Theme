@@ -351,6 +351,7 @@
     $('.product-active').owlCarousel({
       autoplay: true,
       smartSpeed: 300,
+      stagePadding: 0,
       margin: 10,
       loop: true,
       autoplayHoverPause: true,

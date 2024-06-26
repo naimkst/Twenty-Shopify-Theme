@@ -2,7 +2,7 @@
 
   <div class="topbar">
     <div class="row align-items-center">
-      <div class="col-lg-6 offset-lg-3">
+      <div class="col-lg-6 offset-lg-3 offerBar">
         <div class="info-text">
           <p>{{ section.settings.topbar_text }}
             <a href="{{ section.settings.topbar_link }}">{{ section.settings.topbar_link_text }}</a>
@@ -64,34 +64,34 @@
                   alt="logo"></a>
             </div>
           </div>
-          <div class="col-lg-8 col-md-1 col-1">
-            <div id="navbar" class="collapse navbar-collapse navigation-holder">
-              <button class="menu-close">
-                <i class="ti-close"></i>
-              </button>
-              <ul class="nav navbar-nav mb-2 mb-lg-0">
-                {% for link in linklists[section.settings.menu].links %}
-                  {% if link.links.size > 0 %}
-                    <li class="menu-item-has-children">
-                      <a href="{{ link.url }}">{{ link.title }}</a>
-                      <ul class="sub-menu">
-                        {% for child_link in link.links %}
-                          <li>
-                            <a href="{{ child_link.url }}">{{ child_link.title }}</a>
-                          </li>
-                        {% endfor %}
-                      </ul>
-                    </li>
-                  {% else %}
-                    <li>
-                      <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          <!-- end of nav-collapse -->
+
+
+          <div id="navbar" class="collapse navbar-collapse navigation-holder col-lg-8 col-md-1 col-1">
+            <button class="menu-close">
+              <i class="ti-close"></i>
+            </button>
+            <ul class="nav navbar-nav mb-2 mb-lg-0">
+              {% for link in linklists[section.settings.menu].links %}
+                {% if link.links.size > 0 %}
+                  <li class="menu-item-has-children">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    <ul class="sub-menu">
+                      {% for child_link in link.links %}
+                        <li>
+                          <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% else %}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
           </div>
+          <!-- end of nav-collapse -->
           <div class="col-lg-2 col-md-2 col-2">
             <div class="header-right">
               <div class="header-search-form-wrapper">
@@ -183,7 +183,7 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                  
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                                              
                                                         CHECKOUT</a>
                     </div>
                   </div>
