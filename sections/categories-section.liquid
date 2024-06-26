@@ -16,9 +16,7 @@
             </a>
             <a href="{{ product.url }}" class="bottom-btn">{{ product.title }} ({{ product.products_count }})</a>
           </div>
-        {% comment %} {% for collection in product.collections limit: 1 %}
-                    <a href="{{ collection.url }}">{{ collection.title }}</a>
-        {% endfor %} {% endcomment %}
+          <a href="{{ product.url }}">{{ product.title }}</a>
         </div>
       {% endfor %}
     </div>

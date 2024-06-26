@@ -2,7 +2,7 @@
   <div class="upper-footer">
     <div class="container">
       <div class="row">
-        <div class="col col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
+        <div class="col col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="widget link-widget">
             <div class="widget-title">
               <h3>{{ section.settings.useful_links_text }}</h3>
@@ -16,7 +16,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-lg-2 col-md-4 col-sm-12 col-12">
+        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="widget link-widget">
             <div class="widget-title">
               <h3>{{ section.settings.quick_links_text }}</h3>
@@ -30,7 +30,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-xl-2  col-lg-2 col-md-4 col-sm-12 col-12">
+        <div class="col col-xl-3  col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="widget link-widget custom">
             <div class="widget-title">
               <h3>{{ section.settings.company_text }}</h3>
@@ -44,7 +44,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-xl-3  col-lg-3 col-md-6 col-sm-12 col-12">
+        <div class="col col-xl-3  col-lg-3 col-md-3 col-sm-12 col-12">
           <div class="widget link-widget custom">
             <div class="widget-title">
               <h3>{{ section.settings.shop_text }}</h3>
@@ -58,43 +58,22 @@
             </ul>
           </div>
         </div>
-        <div class="col col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-          <div class="widget subscribe">
-            <div class="widget-title">
-              <h3>{{ section.settings.contact_with_us_text }}</h3>
-            </div>
-            <ul class="social">
-              {% if section.settings.facebook_link != blank %}
-                <li>
-                  <a href="{{ section.settings.facebook_link }}">
-                    <i class="ti-facebook"></i>
-                  </a>
-                </li>
-              {% endif %}
-              {% if section.settings.twitter_link != blank %}
-                <li>
-                  <a href="{{ section.settings.twitter_link }}">
-                    <i class="ti-twitter-alt"></i>
-                  </a>
-                </li>
-              {% endif %}
-              {% if section.settings.linkedin_link != blank %}
-                <li>
-                  <a href="{{ section.settings.linkedin_link }}">
-                    <i class="ti-linkedin"></i>
-                  </a>
-                </li>
-              {% endif %}
-              {% if section.settings.instagram_link != blank %}
-                <li>
-                  <a href="{{ section.settings.instagram_link }}">
-                    <i class="ti-instagram"></i>
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-            <div class="widget-title">
-              <h3>{{ section.settings.payment_method_text }}</h3>
+
+      </div>
+    </div>
+  <!-- end container -->
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="footerText">
+          <div></div>
+          <div class="copy-wrap">
+            <p class="copyright">{{ section.settings.copy_right_text }}</p>
+          </div>
+
+          <div class="paymentIcon">
+            <div class="widget subscribe">
               <ul class="payment">
                 <li>
                   <a href="#"><img
@@ -134,17 +113,10 @@
               </ul>
             </div>
           </div>
+
         </div>
-      </div>
-    </div>
-  <!-- end container -->
-  </div>
-  <div class="lower-footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="copy-wrap">
-          <p class="copyright">{{ section.settings.copy_right_text }}</p>
-        </div>
+
+
       </div>
     </div>
   </div>

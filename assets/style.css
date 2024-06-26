@@ -2987,6 +2987,7 @@ img {
   font-weight: 400;
   line-height: 16.8px;
   display: block;
+  text-transform: uppercase;
 }
 .footer-section .link-widget ul li a:hover {
   color: #f14f0e;
@@ -3027,7 +3028,7 @@ img {
 }
 .footer-section .payment {
   display: flex;
-  margin-top: 20px;
+  justify-content: end;
 }
 .footer-section .payment li + li {
   margin-left: 15px;
@@ -5492,6 +5493,21 @@ img {
 .mobileMenu {
   display: none;
 }
+#site-header {
+  display: none;
+}
+.footerText {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.footerText div {
+  flex: 1;
+}
+.collection-page .section-title {
+  text-align: center;
+}
 @media (max-width: 991px) {
   .dcta-section .dcta-wrap h2 {
     font-size: 45px;
@@ -5520,6 +5536,17 @@ img {
   .product-wrap .product-item {
     margin-left: 5px !important;
     margin-right: 5px !important;
+  }
+  .hero-slider .slide-title h2,
+  .static-hero .slide-title h2 {
+    font-size: 40px;
+  }
+  .site-header.header-fixed {
+    display: block !important;
+  }
+  .footerText {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 @media (max-width: 450px) {

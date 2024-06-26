@@ -10,49 +10,51 @@
 
         {% for product in collections %}
           <div class="product-item wow fadeInUp" data-wow-duration="1{{ forloop.index0 }}00ms">
-            <form
-              class="form"
-              action="/cart/add"
-              method="post"
-              enctype="multipart/form-data"
-              id="addToCart">
-              <input
-                type="hidden"
-                class="variant-idss"
-                id="variant-id"
-                name="id"
-                value="{{ product.variants.first.id }}">
-              <input
-                type="hidden"
-                name="return_to"
-                value="/">
-              {% if product.metafields.product.sale_tag.value != blank %}
-                <span class="tag {% if product.metafields.product.sale_tag.value == "Sale" %} sale {% endif %}">{{ product.metafields.product.sale_tag.value }}</span>
-              {% endif %}
-              <div class="product-image">
-                <img
-                  src="{{ product.featured_image | image_url: width: 400  }}"
-                  width=""
-                  height=""
-                  alt="">
-              </div>
-              <div class="product-info">
-                <h2>
-                  <a href="{{ product.url }}">{{ product.title }}</a>
-                </h2>
-                <div class="price">
-                  <span>{{ product.price | money }}</span>
-                </div>
+            <a href="{{ product.url }}">
+              <form
+                class="form"
+                action="/cart/add"
+                method="post"
+                enctype="multipart/form-data"
+                id="addToCart">
                 <input
-                  id="product-count"
-                  class="product-count"
                   type="hidden"
-                  value="1"
-                  name="quantity">
-                {% comment %} <a href="#" class="cart-btn">Add to cart</a> {% endcomment %}
-                <button type="submit" class="cart-btn">Add to cart</button>
-              </div>
-            </form>
+                  class="variant-idss"
+                  id="variant-id"
+                  name="id"
+                  value="{{ product.variants.first.id }}">
+                <input
+                  type="hidden"
+                  name="return_to"
+                  value="/">
+                {% if product.metafields.product.sale_tag.value != blank %}
+                  <span class="tag {% if product.metafields.product.sale_tag.value == "Sale" %} sale {% endif %}">{{ product.metafields.product.sale_tag.value }}</span>
+                {% endif %}
+                <div class="product-image">
+                  <img
+                    src="{{ product.featured_image | image_url: width: 400  }}"
+                    width=""
+                    height=""
+                    alt="">
+                </div>
+                <div class="product-info">
+                  <h2>
+                    <a href="{{ product.url }}">{{ product.title }}</a>
+                  </h2>
+                  <div class="price">
+                    <span>{{ product.price | money }}</span>
+                  </div>
+                  <input
+                    id="product-count"
+                    class="product-count"
+                    type="hidden"
+                    value="1"
+                    name="quantity">
+                  {% comment %} <a href="#" class="cart-btn">Add to cart</a> {% endcomment %}
+                  <button type="submit" class="cart-btn">Add to cart</button>
+                </div>
+              </form>
+            </a>
           </div>
         {% endfor %}
 

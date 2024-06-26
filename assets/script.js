@@ -575,17 +575,17 @@
         WHEN WINDOW SCROLL
     ==========================================================================*/
   $(window).on('scroll', function () {
-    var headerSection = $('.site-header');
+    var headerSection = $('#site-header');
 
     if ($(window).scrollTop() > 300) {
-      headerSection.addClass('header-fixed fadeInDown animated');
+      headerSection.addClass('header-fixed');
     } else {
-      headerSection.removeClass('header-fixed fadeInDown animated');
+      headerSection.removeClass('header-fixed');
     }
 
     // fixed header remove for register page only
-    if ($('.site-header').hasClass('header-for-register')) {
-      $('.site-header').removeClass('header-fixed fadeInDown animated');
+    if ($('#site-header').hasClass('header-for-register')) {
+      $('#site-header').removeClass('header-fixed');
     }
 
     toggleBackToTopBtn();

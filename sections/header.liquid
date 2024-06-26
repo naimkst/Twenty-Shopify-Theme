@@ -183,7 +183,163 @@
                       </li>
                     </ul>
                     <div class="mini-btn">
-                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                                              
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                                                     
+                                                        CHECKOUT</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- end of container -->
+    </nav>
+  </div>
+
+  <div class="site-header" id="site-header">
+    <nav class="navigation navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+            <div class="mobail-menu">
+              <button type="button" class="navbar-toggler open-btn">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar first-angle"></span>
+                <span class="icon-bar middle-angle"></span>
+                <span class="icon-bar last-angle"></span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/"><img
+                  src="{{ section.settings.logo | image_url: width: 500 }}"
+                  width=""
+                  height=""
+                  alt="logo"></a>
+            </div>
+          </div>
+
+
+          <div id="navbar" class="collapse navbar-collapse navigation-holder col-lg-8 col-md-1 col-1">
+            <button class="menu-close">
+              <i class="ti-close"></i>
+            </button>
+            <ul class="nav navbar-nav mb-2 mb-lg-0">
+              {% for link in linklists[section.settings.menu].links %}
+                {% if link.links.size > 0 %}
+                  <li class="menu-item-has-children">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    <ul class="sub-menu">
+                      {% for child_link in link.links %}
+                        <li>
+                          <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% else %}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <!-- end of nav-collapse -->
+          <div class="col-lg-2 col-md-2 col-2">
+            <div class="header-right">
+              <div class="header-search-form-wrapper">
+                <div class="cart-search-contact">
+                  <button class="search-toggle-btn">
+                    <i class="fi flaticon-search"></i>
+                  </button>
+                  <div class="header-search-form">
+                    <form class="searchform" action="{{ routes.search_url }}">
+                      <div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search here..."
+                          name="q"
+                          value="{{ search.terms | escape }}">
+                        <button type="submit">
+                          <i class="fi flaticon-search"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="header-login">
+                <a class="login-btn" href="#">
+                  <i class="fi flaticon-user-profile"></i>
+                </a>
+              </div>
+              <div class="mini-cart">
+                <button class="cart-toggle-btn">
+                  <i class="fi flaticon-add-to-cart"></i>
+                  <span class="cart-count">{{ cart.item_count }}</span>
+                </button>
+                <div class="mini-cart-content">
+                  <div class="title"></div>
+                  <button class="mini-cart-close">
+                    <i class="ti-close"></i>
+                  </button>
+                  <div class="mini-cart-items">
+                    <p class="top-p">Your Cart ({{ cart.item_count }})</p>
+                    {% for item in cart.items %}
+                      <div class="mini-cart-item clearfix">
+                        <div class="mini-cart-item-image">
+                          <a href="{{ item.url }}"><img
+                              src="{{ item.image |  image_url: width: 300  }}"
+                              width=""
+                              height=""
+                              alt></a>
+                        </div>
+                        <div class="mini-cart-item-des">
+                          <h4>
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                          </h4>
+                          <ul class="product-text-sub">
+                            <li>
+                              {{ item.variant.title }}
+                            </li>
+                          </ul>
+                          <a
+                            href="#"
+                            onclick="removeItem({{ forloop.index }}, 0)"
+                            class="dlt-btn">
+                            <i class="ti-trash"></i>
+                          </a>
+                        </div>
+                        <div class="pro-single-btn">
+                          <span class="price">{{ item.price | money }}</span>
+                          <div class="quantity cart-plus-minus">
+                            <input
+                              type="text"
+                              value="{{ item.quantity }}"
+                              onkeyup="updateQty({{ forloop.index }})">
+                            <div class="dec qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | minus: 1 }})"></div>
+                            <div class="inc qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | plus: 1 }})"></div>
+                            <div class="dec qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | minus: 1 }})">-</div>
+                            <div class="inc qtybutton" onclick="updateQty({{ forloop.index }}, {{ item.quantity | plus: 1 }})">+</div>
+                          </div>
+                        </div>
+                      </div>
+                    {% endfor %}
+
+                  </div>
+                  <div class="mini-cart-action clearfix">
+                    <ul>
+                      <li>Subtotal({{ cart.item_count }} items)</li>
+                      <li>
+                        <strong>{{ cart.items_subtotal_price | money }}</strong>
+                      </li>
+                    </ul>
+                    <div class="mini-btn">
+                      <a href="/checkout" class="view-cart-btn">CONTINUE TO                                                                                                                                                                                                                                                     
                                                         CHECKOUT</a>
                     </div>
                   </div>
