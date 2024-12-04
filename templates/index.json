@@ -164,6 +164,7 @@
     },
     "statement_section_DzpQ64": {
       "type": "statement-section",
+      "disabled": true,
       "settings": {
         "logo": "shopify://shop_images/logo.svg",
         "slug": "A BOLD STATEMENT",
